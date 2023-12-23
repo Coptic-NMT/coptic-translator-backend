@@ -6,22 +6,25 @@ A Python research module containing code to generate and analyze neural machine 
 ### Installing the Package
 To install the `translation` package, you must first ensure that your virtual environment has all the required dependencies. Run `pip install -e .` from the base directory and install all required modules into your virtual environment.
 
-### Running the Website
-The translation API paths are stored in the `NEXT_PUBLIC_ENGLISH_API` and `NEXT_PUBLIC_COPTIC_API` environmental variables. To run the website locally with your own translation APIs, refer to the instructions in the [Running a Backend](#running-a-backend) section.
+### Running the website
 
-To run the frontend:
-1. Make sure `npm` is installed onto your machine.
-2. Navigate to the `website/coptic-translator` directory.
-3. Run `npm install`.
-4. Run `npm run dev`.
+Refer to the [frontend](https://github.com/Coptic-NMT/coptic-translator-frontend) repo for instrucitons on running the UI locally.
 
-### Running a Backend
-The translation models are not included in the GitHub repo. Eventually, we plan to host our model weights on HuggingFace. If you would like to host your own translation models, we recommend the following steps:
-1. Load source-target and target-source PyTorch models (from HuggingFace, or train your own using the provided utilities).
-2. Create a source-target and target-source REST API using [TorchServe](https://pytorch.org/serve/).
-3. Update the destination in `next.config.js` with your backend server address.
-4. Store the APIs in the `NEXT_PUBLIC_ENGLISH_API` and `NEXT_PUBLIC_COPTIC_API` environmental variables (for local developemnt, put them in a `.env.local` file)
-5. Run the server and the frontend. Now, your frontend should have full functionality.
+### Running this middleware server with a GCP server Endpoint
+
+1. Create a `.env` file in the `server` folder
+2. Put the following fields in the `.env` file. Replace `<field>` with your values.
+```
+COPTIC_TO_ENGLISH_ENDPOINT_ID="<cop-eng endpoint id>"
+ENGLISH_TO_COPTIC_ENDPOINT_ID="<eng-cop endpoint id>"
+PROJECT_ID="<project id>"
+LOCATION="<location>"
+PORT="<port to run the middleware on>"
+```
+1. Call
+```bash
+npm start
+```
 
 ### License
 
