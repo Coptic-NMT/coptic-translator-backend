@@ -20,3 +20,5 @@ build/
 dist/
 logs/
 .DS_Store
+node_modules/
+.env

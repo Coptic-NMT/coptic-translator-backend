@@ -26,6 +26,32 @@ PORT="<port to run the middleware on>"
 npm start
 ```
 
+### Dockerizing a model
+
+To deploy a model, you first need to put in a docker container.
+1. Place your model artifacts in `models/<model name>` folder. This should include the following files
+   1. Model config files
+   2. Tokenizer files
+   3. `config.properties` - see the documentation [here](https://pytorch.org/serve/configuration.html).
+   4. `handler.py` - see the documentation [here](https://pytorch.org/serve/custom_service.html?highlight=handler#custom-handlers)
+   5. `pytorch_model.bin` - weights
+2. Run the docker build script. Use `-gpu` flag if you plan on serving your model on a GPU. You must include the `-m` flag with 
+the name of your model in the `models/` directory
+Example:
+```bash
+./build_docker.sh -gpu -m cop-en-norm-group-greekified
+```
+
+To run your docker contiainer use
+```bash
+docker run -p 7080:7080 us-central1-docker.pkg.dev/coptic-translation/nmt-docker-repo/<model name>:<processor>
+```
+
+Run this to push your model to the GCP repo (if you have access)
+```bash
+docker push us-central1-docker.pkg.dev/coptic-translation/nmt-docker-repo/<model name>:<processor>
+```
+
 ### License
 
 This project is licensed under the MIT License - see the LICENSE.md file for details.
