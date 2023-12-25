@@ -77,6 +77,7 @@ async function handleRequest(req, res, api) {
       },
       body: JSON.stringify(instance),
     }).then((res) => res.json());
+    console.log("Response: ", response);
     if (response.error && response.error.includes("loading")) {
       setTimeout(() => {
         console.log("Retrying request: ", req);
