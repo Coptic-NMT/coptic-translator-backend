@@ -68,33 +68,19 @@ COPTIC_TO_GREEK = {
   ϯ: "t",
 };
 
-function degreekify(sentence) {
-  let newSentence = "";
-  for (let i = 0; i < sentence.length; i++) {
-    const char = sentence[i];
-    if (GREEK_TO_COPTIC[char]) {
-      newSentence += GREEK_TO_COPTIC[char];
-    } else {
-      newSentence += char;
-    }
-  }
-  return newSentence;
-}
+const degreekify = (sentence) =>
+  sentence
+    .split("")
+    .map((char) => GREEK_TO_COPTIC[char] || char)
+    .join("");
 
-function greekify(sentence) {
-  let newSentence = "";
-  for (let i = 0; i < sentence.length; i++) {
-    const char = sentence[i];
-    if (COPTIC_TO_GREEK[char]) {
-      newSentence += COPTIC_TO_GREEK[char];
-    } else {
-      newSentence += char;
-    }
-  }
-  return newSentence;
-}
+const greekify = (sentence) =>
+  sentence
+    .split("")
+    .map((char) => COPTIC_TO_GREEK[char] || char)
+    .join("");
 
 module.exports = {
-    degreekify,
-    greekify,
-  };
+  degreekify,
+  greekify,
+};
