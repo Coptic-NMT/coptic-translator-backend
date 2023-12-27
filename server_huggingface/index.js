@@ -59,6 +59,7 @@ async function handleRequest(req, res, api) {
   let input = req;
   let endpoint = englishToCopticEndpoint;
   if (api === "english") {
+    input = input.toLowerCase();
     input = greekify(input);
     endpoint = copticToEnglishEndpoint;
   }
