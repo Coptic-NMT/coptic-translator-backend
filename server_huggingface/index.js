@@ -50,7 +50,7 @@ app.use((req, res) => {
   res.status(404).json({ message: "Not Found" });
 });
 
-async function handleRequest(req, res, api) {
+async function handleRequest(req, res, api, retries = 0) {
   console.log("Request: ", req);
   if (typeof req !== "string") {
     res.status(500).json({ code: 500, message: "InternalServerError" });
@@ -79,10 +79,20 @@ async function handleRequest(req, res, api) {
       body: JSON.stringify(instance),
     }).then((res) => res.json());
     console.log("Response: ", response);
-    if (response.error && response.error.includes("loading")) {
+
+    let nextRetries = retries;
+    if (response.error && response.error.includes("Service Unavailable")) {
+      nextRetries += 1;
+    }
+
+    if (
+      response.error &&
+      (response.error.includes("loading") ||
+        (response.error.includes("Service Unavailable") && nextRetries <= 5))
+    ) {
       setTimeout(() => {
-        console.log("Retrying request: ", req);
-        handleRequest(req, res, api);
+        console.log("Retrying request #", nextRetries, ": ", req);
+        handleRequest(req, res, api, nextRetries);
       }, 5000);
       return;
     }
