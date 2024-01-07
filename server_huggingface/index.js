@@ -80,6 +80,11 @@ async function handleRequest(req, res, api, retries = 0) {
     }).then((res) => res.json());
     console.log("Response: ", response);
 
+    if (response.error && response.error.includes("Input is too long")) {
+      res.status(422).json({ code: 422, message: "InputTooLong" });
+      return;
+    }
+
     let nextRetries = retries;
     if (response.error && response.error.includes("Service Unavailable")) {
       nextRetries += 1;
