@@ -67,6 +67,9 @@ async function handleRequest(req, res, api, retries = 0) {
   const instance = {
     inputs: [input],
     parameters: generationConfig,
+    options: {
+      wait_for_model: true,
+    }
   };
 
   try {
