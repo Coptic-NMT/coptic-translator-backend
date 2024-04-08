@@ -20,8 +20,16 @@ ENGLISH_TO_COPTIC_ENDPOINT = os.getenv("ENGLISH_TO_COPTIC_ENDPOINT")
 MAX_RETRIES = 5
 
 ENGLISH = "en"
-COPTIC = "cop"
+SAHIDIC_COPTIC = "cop_sah"
+BOHAIRIC_COPTIC = "cop_boh"
 ARABIC = "ar"
+
+COPTIC_LANGUAGES = [SAHIDIC_COPTIC, BOHAIRIC_COPTIC]
+
+COPTIC_DIALECT_TAG = {
+    SAHIDIC_COPTIC: "з",
+    BOHAIRIC_COPTIC: "б",
+}
 
 GENERATION_CONFIG = {
     "max_length": 20,
@@ -45,38 +53,28 @@ def gtranslate(text, src, tgt):
     return translator.translate(text, src=src, dest=tgt).text
 
 
-def preprocess(src, text):
+# Only when one of src or tgt is coptic
+def preprocess(src, text, tgt):
     if src == ARABIC:
         text = gtranslate(text, ARABIC, ENGLISH)
-    elif src == COPTIC:
+
+    if src in COPTIC_LANGUAGES:
         text = greekify(text.lower())
+        text = f"{COPTIC_DIALECT_TAG[src]} {text}"
+    else:
+        text = f"{COPTIC_DIALECT_TAG[tgt]} {text}"
 
     return text
 
 
 def postprocess(tgt, text):
-    if tgt == COPTIC:
+    if tgt in COPTIC_LANGUAGES:
         text = degreekify(text)
     elif tgt == ARABIC:
         text = gtranslate(text, ENGLISH, ARABIC)
     return jsonify({"code": 200, "translation": text})
 
-
-@app.route("/translate", methods=["POST"])
-def translate():
-    req = request.get_json()
-    src, tgt, text = req["src"], req["tgt"], req["text"]
-    print(f"src: {src}, tgt: {tgt}, text: {text}")
-    if (src, tgt) == (ARABIC, ENGLISH) or (src, tgt) == (ENGLISH, ARABIC):
-        try:
-            return postprocess(tgt=tgt, text=gtranslate(text, src, tgt)), 200
-        except Exception as e:
-            print(f"Error: {e}")
-            return jsonify({"code": 500, "message": "InternalServerError"}), 500
-
-    text = preprocess(src=src, text=text)
-    api = ENGLISH_TO_COPTIC_ENDPOINT if tgt == COPTIC else COPTIC_TO_ENGLISH_ENDPOINT
-
+def get_translation(api, text):
     instance = {
         "inputs": [text],
         "parameters": GENERATION_CONFIG,
@@ -104,6 +102,41 @@ def translate():
             print(f"Error: {e}")
             continue
 
+    return translation, status
+
+@app.route("/translate", methods=["POST"])
+def translate():
+    req = request.get_json()
+    src, tgt, text = req["src"], req["tgt"], req["text"]
+    print(f"src: {src}, tgt: {tgt}, text: {text}")
+    if (src, tgt) == (ARABIC, ENGLISH) or (src, tgt) == (ENGLISH, ARABIC):
+        try:
+            return postprocess(tgt=tgt, text=gtranslate(text, src, tgt)), 200
+        except Exception as e:
+            print(f"Error: {e}")
+            return jsonify({"code": 500, "message": "InternalServerError"}), 500
+
+    text = preprocess(src=src, text=text, tgt=tgt)
+    api = (
+        ENGLISH_TO_COPTIC_ENDPOINT
+        if tgt in COPTIC_LANGUAGES
+        else COPTIC_TO_ENGLISH_ENDPOINT
+    )
+    if src in COPTIC_LANGUAGES and tgt in COPTIC_LANGUAGES:
+        api = COPTIC_TO_ENGLISH_ENDPOINT
+
+    translation, status = get_translation(api, text)
+    match status:
+        case HTTPStatus.INTERNAL_SERVER_ERROR:
+            return jsonify({"code": status, "message": "InternalServerError"}), 500
+        case HTTPStatus.UNPROCESSABLE_ENTITY:
+            return jsonify({"code": status, "message": "InputTooLong"}), 422
+    
+    if src in COPTIC_LANGUAGES and tgt in COPTIC_LANGUAGES:
+        text = preprocess(src=ENGLISH, text=translation, tgt=tgt)
+        api = ENGLISH_TO_COPTIC_ENDPOINT
+        translation, status = get_translation(api, text)
+    
     match status:
         case HTTPStatus.INTERNAL_SERVER_ERROR:
             return jsonify({"code": status, "message": "InternalServerError"}), 500
@@ -111,7 +144,6 @@ def translate():
             return jsonify({"code": status, "message": "InputTooLong"}), 422
         case HTTPStatus.OK:
             return postprocess(tgt=tgt, text=translation), 200
-
 
 if __name__ == "__main__":
     app.run(debug=True, host="0.0.0.0", port=PORT)
