@@ -22,7 +22,6 @@ MAX_RETRIES = 5
 ENGLISH = "en"
 SAHIDIC_COPTIC = "cop_sah"
 BOHAIRIC_COPTIC = "cop_boh"
-ARABIC = "ar"
 
 COPTIC_LANGUAGES = [SAHIDIC_COPTIC, BOHAIRIC_COPTIC]
 
@@ -55,8 +54,8 @@ def gtranslate(text, src, tgt):
 
 # Only when one of src or tgt is coptic
 def preprocess(src, text, tgt):
-    if src == ARABIC:
-        text = gtranslate(text, ARABIC, ENGLISH)
+    if src != ENGLISH and src not in COPTIC_LANGUAGES:
+        text = gtranslate(text, src, ENGLISH)
 
     if src in COPTIC_LANGUAGES:
         text = greekify(text.lower())
@@ -70,9 +69,10 @@ def preprocess(src, text, tgt):
 def postprocess(tgt, text):
     if tgt in COPTIC_LANGUAGES:
         text = degreekify(text)
-    elif tgt == ARABIC:
-        text = gtranslate(text, ENGLISH, ARABIC)
+    elif tgt != ENGLISH:
+        text = gtranslate(text, ENGLISH, tgt)
     return jsonify({"code": 200, "translation": text})
+
 
 def get_translation(api, text):
     instance = {
@@ -104,12 +104,13 @@ def get_translation(api, text):
 
     return translation, status
 
+
 @app.route("/translate", methods=["POST"])
 def translate():
     req = request.get_json()
     src, tgt, text = req["src"], req["tgt"], req["text"]
     print(f"src: {src}, tgt: {tgt}, text: {text}")
-    if (src, tgt) == (ARABIC, ENGLISH) or (src, tgt) == (ENGLISH, ARABIC):
+    if src not in COPTIC_LANGUAGES and tgt not in COPTIC_LANGUAGES:
         try:
             return postprocess(tgt=tgt, text=gtranslate(text, src, tgt)), 200
         except Exception as e:
@@ -131,12 +132,12 @@ def translate():
             return jsonify({"code": status, "message": "InternalServerError"}), 500
         case HTTPStatus.UNPROCESSABLE_ENTITY:
             return jsonify({"code": status, "message": "InputTooLong"}), 422
-    
+
     if src in COPTIC_LANGUAGES and tgt in COPTIC_LANGUAGES:
         text = preprocess(src=ENGLISH, text=translation, tgt=tgt)
         api = ENGLISH_TO_COPTIC_ENDPOINT
         translation, status = get_translation(api, text)
-    
+
     match status:
         case HTTPStatus.INTERNAL_SERVER_ERROR:
             return jsonify({"code": status, "message": "InternalServerError"}), 500
