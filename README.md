@@ -3,6 +3,15 @@
 A Python research module containing code to generate and analyze neural machine translators, parse Coptic datasets, and code to create a simple Google-translate-like frontend. This repo was used to build https://www.coptictranslator.com.
 
 
+### Using the models locally
+
+The best performing models are open-source and have easy to use pipeline APIs through HuggingFace. Refer to the documentation on the model cards for how to run them.
+
+[Coptic to English Translator](https://huggingface.co/megalaa/coptic-english-translator)
+
+[English to Coptic Translator](https://huggingface.co/megalaa/english-coptic-translator)
+
+
 ### Installing the Package
 To install the `translation` package, you must first ensure that your virtual environment has all the required dependencies. Run `pip install -e .` from the base directory and install all required modules into your virtual environment.
 
