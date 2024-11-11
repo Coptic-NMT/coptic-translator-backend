@@ -162,6 +162,8 @@ def translate():
 
     try:
         translation, status = translate_universal(text, src, tgt)
+    except ValueError as e:
+        translation, status = "", 400
     except Exception as e:
         translation, status = "", 500
 
@@ -170,8 +172,13 @@ def translate():
             return jsonify({"code": status, "message": "InternalServerError"}), 500
         case HTTPStatus.UNPROCESSABLE_ENTITY:
             return jsonify({"code": status, "message": "InputTooLong"}), 422
+        case HTTPStatus.BAD_REQUEST:
+            return jsonify({"code": status, "message": f"Invalid source or target language"})
         case HTTPStatus.OK:
             return translation, status
+        case _:
+            return jsonify({"code": 500, "message": f"Unknown status code {status}"})
+
     
 
 if __name__ == "__main__":

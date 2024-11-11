@@ -19,11 +19,11 @@ def get_language(code: str):
     return language
 
 
-USER_PROMPT = """Translate the following from {src_name} to {tgt_name}. Do not provide any output text besides for the translation.
+USER_PROMPT = """Translate the following from {src_name} to {tgt_name}. Do not provide any output text besides for the translation. Wrap your output in <translation></translation> tags.
 
 English: {text}"""
 
-ASSISTANT_PROMPT = "{tgt_name}:"
+ASSISTANT_PROMPT = "{tgt_name}: <translation>"
 
 def translate_universal(src_code, tgt_code, text):
     src = get_language(src_code)
@@ -34,9 +34,9 @@ def translate_universal(src_code, tgt_code, text):
     assistant_prompt = ASSISTANT_PROMPT.format(tgt_name=tgt['name']) 
     # Perform the translation using the anthropic client
     response = client_anthropic.messages.create(
-        model="claude-3-5-sonnet-20240620",  # Assuming a model name, replace with the correct one
-        max_tokens=100,  # Adjust as needed
-        temperature=0,  # Adjust as needed
+        model="claude-3-5-sonnet-20241022",
+        max_tokens=400,
+        temperature=0,
         messages = [
             {
                 "role": "user",
@@ -53,8 +53,8 @@ def translate_universal(src_code, tgt_code, text):
                     }
                 ]
             }
-            
-        ]
+        ],
+        stop_sequences=["</translation>"]
     )
 
     # Extract the translation from the response
