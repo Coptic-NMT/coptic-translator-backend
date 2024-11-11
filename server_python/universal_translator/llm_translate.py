@@ -2,11 +2,11 @@ import json
 from pathlib import Path
 import anthropic
 import openai
-from server_python.read_keys import API_KEYS
+import os
 
 languages = json.loads(Path('server_python/universal_translator/languages.json').read_text())
-client_anthropic = anthropic.Anthropic(api_key=API_KEYS['ANTHROPIC_API_KEY'])
-client_openai = openai.OpenAI(api_key=API_KEYS['OPENAI_API_KEY'])
+client_anthropic = anthropic.Anthropic(api_key=os.environ['ANTHROPIC_API_KEY'])
+client_openai = openai.OpenAI(api_key=os.environ['OPENAI_API_KEY'])
 
 def get_language(code: str):
     language = next((language for language in languages if language['flores_code'] == code), None)
