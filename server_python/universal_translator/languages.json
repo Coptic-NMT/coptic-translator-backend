@@ -1,0 +1,507 @@
+[
+    {
+        "name": "English",
+        "google_code": "en",
+        "flores_code": "eng_Latn"
+    },
+    {
+        "name": "Mandarin Chinese",
+        "google_code": "zh-CN",
+        "flores_code": "zho_Hans"
+    },
+    {
+        "name": "Spanish",
+        "google_code": "es",
+        "flores_code": "spa_Latn"
+    },
+    {
+        "name": "Hindi",
+        "google_code": "hi",
+        "flores_code": "hin_Deva"
+    },
+    {
+        "name": "Bengali",
+        "google_code": "bn",
+        "flores_code": "ben_Beng"
+    },
+    {
+        "name": "Portuguese",
+        "google_code": "pt",
+        "flores_code": "por_Latn"
+    },
+    {
+        "name": "Russian",
+        "google_code": "ru",
+        "flores_code": "rus_Cyrl"
+    },
+    {
+        "name": "Japanese",
+        "google_code": "ja",
+        "flores_code": "jpn_Jpan"
+    },
+    {
+        "name": "Western Punjabi",
+        "google_code": "pa",
+        "flores_code": "pan_Arab"
+    },
+    {
+        "name": "Marathi",
+        "google_code": "mr",
+        "flores_code": "mar_Deva"
+    },
+    {
+        "name": "Telugu",
+        "google_code": "te",
+        "flores_code": "tel_Telu"
+    },
+    {
+        "name": "Wu Chinese",
+        "google_code": "wuu",
+        "flores_code": "wuu_Hans"
+    },
+    {
+        "name": "Turkish",
+        "google_code": "tr",
+        "flores_code": "tur_Latn"
+    },
+    {
+        "name": "Korean",
+        "google_code": "ko",
+        "flores_code": "kor_Hang"
+    },
+    {
+        "name": "French",
+        "google_code": "fr",
+        "flores_code": "fra_Latn"
+    },
+    {
+        "name": "German",
+        "google_code": "de",
+        "flores_code": "deu_Latn"
+    },
+    {
+        "name": "Vietnamese",
+        "google_code": "vi",
+        "flores_code": "vie_Latn"
+    },
+    {
+        "name": "Tamil",
+        "google_code": "ta",
+        "flores_code": "tam_Taml"
+    },
+    {
+        "name": "Yue Chinese",
+        "google_code": "yue",
+        "flores_code": "yue_Hant"
+    },
+    {
+        "name": "Urdu",
+        "google_code": "ur",
+        "flores_code": "urd_Arab"
+    },
+    {
+        "name": "Javanese",
+        "google_code": "jv",
+        "flores_code": "jav_Latn"
+    },
+    {
+        "name": "Italian",
+        "google_code": "it",
+        "flores_code": "ita_Latn"
+    },
+    {
+        "name": "Egyptian Arabic",
+        "google_code": "arz",
+        "flores_code": "arz_Arab"
+    },
+    {
+        "name": "Gujarati",
+        "google_code": "gu",
+        "flores_code": "guj_Gujr"
+    },
+    {
+        "name": "Iranian Persian",
+        "google_code": "fa",
+        "flores_code": "pes_Arab"
+    },
+    {
+        "name": "Bhojpuri",
+        "google_code": "bho",
+        "flores_code": "bho_Deva"
+    },
+    {
+        "name": "Min Nan Chinese",
+        "google_code": "nan",
+        "flores_code": "nan_Hani"
+    },
+    {
+        "name": "Hakka Chinese",
+        "google_code": "hak",
+        "flores_code": "hak_Hani"
+    },
+    {
+        "name": "Jin Chinese",
+        "google_code": "cjy",
+        "flores_code": "cjy_Hani"
+    },
+    {
+        "name": "Hausa",
+        "google_code": "ha",
+        "flores_code": "hau_Latn"
+    },
+    {
+        "name": "Polish",
+        "google_code": "pl",
+        "flores_code": "pol_Latn"
+    },
+    {
+        "name": "Yoruba",
+        "google_code": "yo",
+        "flores_code": "yor_Latn"
+    },
+    {
+        "name": "Malayalam",
+        "google_code": "ml",
+        "flores_code": "mal_Mlym"
+    },
+    {
+        "name": "Odia",
+        "google_code": "or",
+        "flores_code": "ory_Orya"
+    },
+    {
+        "name": "Burmese",
+        "google_code": "my",
+        "flores_code": "mya_Mymr"
+    },
+    {
+        "name": "Sundanese",
+        "google_code": "su",
+        "flores_code": "sun_Latn"
+    },
+    {
+        "name": "Ukrainian",
+        "google_code": "uk",
+        "flores_code": "ukr_Cyrl"
+    },
+    {
+        "name": "Igbo",
+        "google_code": "ig",
+        "flores_code": "ibo_Latn"
+    },
+    {
+        "name": "Tagalog",
+        "google_code": "tl",
+        "flores_code": "tgl_Latn"
+    },
+    {
+        "name": "Xiang Chinese",
+        "google_code": "hsn",
+        "flores_code": "hsn_Hani"
+    },
+    {
+        "name": "Maithili",
+        "google_code": "mai",
+        "flores_code": "mai_Deva"
+    },
+    {
+        "name": "Kannada",
+        "google_code": "kn",
+        "flores_code": "kan_Knda"
+    },
+    {
+        "name": "Sinhala",
+        "google_code": "si",
+        "flores_code": "sin_Sinh"
+    },
+    {
+        "name": "Amharic",
+        "google_code": "am",
+        "flores_code": "amh_Ethi"
+    },
+    {
+        "name": "Moroccan Arabic",
+        "google_code": "ary",
+        "flores_code": "ary_Arab"
+    },
+    {
+        "name": "Northern Uzbek",
+        "google_code": "uz",
+        "flores_code": "uzb_Latn"
+    },
+    {
+        "name": "Sindhi",
+        "google_code": "sd",
+        "flores_code": "snd_Arab"
+    },
+    {
+        "name": "Northern Pashto",
+        "google_code": "ps",
+        "flores_code": "pbu_Arab"
+    },
+    {
+        "name": "Nigerian Fulfulde",
+        "google_code": "fuv",
+        "flores_code": "fuv_Latn"
+    },
+    {
+        "name": "Romanian",
+        "google_code": "ro",
+        "flores_code": "ron_Latn"
+    },
+    {
+        "name": "Dutch",
+        "google_code": "nl",
+        "flores_code": "nld_Latn"
+    },
+    {
+        "name": "Gan Chinese",
+        "google_code": "gan",
+        "flores_code": "gan_Hani"
+    },
+    {
+        "name": "Thai",
+        "google_code": "th",
+        "flores_code": "tha_Thai"
+    },
+    {
+        "name": "Cebuano",
+        "google_code": "ceb",
+        "flores_code": "ceb_Latn"
+    },
+    {
+        "name": "Nepali",
+        "google_code": "ne",
+        "flores_code": "nep_Deva"
+    },
+    {
+        "name": "Saraiki",
+        "google_code": "skr",
+        "flores_code": "skr_Arab"
+    },
+    {
+        "name": "Malagasy",
+        "google_code": "mg",
+        "flores_code": "plt_Latn"
+    },
+    {
+        "name": "Sudanese Arabic",
+        "google_code": "apd",
+        "flores_code": "apd_Arab"
+    },
+    {
+        "name": "Assamese",
+        "google_code": "as",
+        "flores_code": "asm_Beng"
+    },
+    {
+        "name": "Sinhalese",
+        "google_code": "si",
+        "flores_code": "sin_Sinh"
+    },
+    {
+        "name": "Northern Kurdish",
+        "google_code": "kmr",
+        "flores_code": "kmr_Latn"
+    },
+    {
+        "name": "Zulu",
+        "google_code": "zu",
+        "flores_code": "zul_Latn"
+    },
+    {
+        "name": "Bavarian",
+        "google_code": "bar",
+        "flores_code": "bar_Latn"
+    },
+    {
+        "name": "Kinyarwanda",
+        "google_code": "rw",
+        "flores_code": "kin_Latn"
+    },
+    {
+        "name": "Ilocano",
+        "google_code": "ilo",
+        "flores_code": "ilo_Latn"
+    },
+    {
+        "name": "Sylheti",
+        "google_code": "syl",
+        "flores_code": "syl_Beng"
+    },
+    {
+        "name": "Rangpuri",
+        "google_code": "rkt",
+        "flores_code": "rkt_Beng"
+    },
+    {
+        "name": "Okinawan",
+        "google_code": "ryu",
+        "flores_code": "ryu_Jpan"
+    },
+    {
+        "name": "Hijazi Arabic",
+        "google_code": "acw",
+        "flores_code": "acw_Arab"
+    },
+    {
+        "name": "Eastern Punjabi",
+        "google_code": "pa",
+        "flores_code": "pan_Guru"
+    },
+    {
+        "name": "Chittagonian",
+        "google_code": "ctg",
+        "flores_code": "ctg_Beng"
+    },
+    {
+        "name": "Somali",
+        "google_code": "so",
+        "flores_code": "som_Latn"
+    },
+    {
+        "name": "Madurese",
+        "google_code": "mad",
+        "flores_code": "mad_Latn"
+    },
+    {
+        "name": "Magahi",
+        "google_code": "mag",
+        "flores_code": "mag_Deva"
+    },
+    {
+        "name": "Haryanvi",
+        "google_code": "bgc",
+        "flores_code": "bgc_Deva"
+    },
+    {
+        "name": "Chhattisgarhi",
+        "google_code": "hne",
+        "flores_code": "hne_Deva"
+    },
+    {
+        "name": "Chewa",
+        "google_code": "ny",
+        "flores_code": "nya_Latn"
+    },
+    {
+        "name": "Deccan",
+        "google_code": "dcc",
+        "flores_code": "dcc_Arab"
+    },
+    {
+        "name": "Tswana",
+        "google_code": "tn",
+        "flores_code": "tsn_Latn"
+    },
+    {
+        "name": "Belarusian",
+        "google_code": "be",
+        "flores_code": "bel_Cyrl"
+    },
+    {
+        "name": "Uyghur",
+        "google_code": "ug",
+        "flores_code": "uig_Arab"
+    },
+    {
+        "name": "Lombard",
+        "google_code": "lmo",
+        "flores_code": "lmo_Latn"
+    },
+    {
+        "name": "Oromo",
+        "google_code": "om",
+        "flores_code": "orm_Latn"
+    },
+    {
+        "name": "Malay",
+        "google_code": "ms",
+        "flores_code": "zsm_Latn"
+    },
+    {
+        "name": "Bashkir",
+        "google_code": "ba",
+        "flores_code": "bak_Cyrl"
+    },
+    {
+        "name": "Awadhi",
+        "google_code": "awa",
+        "flores_code": "awa_Deva"
+    },
+    {
+        "name": "Azerbaijani",
+        "google_code": "az",
+        "flores_code": "azj_Latn"
+    },
+    {
+        "name": "Yiddish",
+        "google_code": "yi",
+        "flores_code": "ydd_Hebr"
+    },
+    {
+        "name": "Haitian Creole",
+        "google_code": "ht",
+        "flores_code": "hat_Latn"
+    },
+    {
+        "name": "Fula",
+        "google_code": "ff",
+        "flores_code": "ful_Latn"
+    },
+    {
+        "name": "Napoletano-Calabrese",
+        "google_code": "nap",
+        "flores_code": "nap_Latn"
+    },
+    {
+        "name": "Northern Min",
+        "google_code": "cdo",
+        "flores_code": "cdo_Hani"
+    },
+    {
+        "name": "Kazakh",
+        "google_code": "kk",
+        "flores_code": "kaz_Cyrl"
+    },
+    {
+        "name": "Mingrelian",
+        "google_code": "xmf",
+        "flores_code": "xmf_Geor"
+    },
+    {
+        "name": "Santali",
+        "google_code": "sat",
+        "flores_code": "sat_Olck"
+    },
+    {
+        "name": "Bagheli",
+        "google_code": "bfy",
+        "flores_code": "bfy_Deva"
+    },
+    {
+        "name": "Khmer",
+        "google_code": "km",
+        "flores_code": "khm_Khmr"
+    },
+    {
+        "name": "Shona",
+        "google_code": "sn",
+        "flores_code": "sna_Latn"
+    },
+    {
+        "name": "Hiligaynon",
+        "google_code": "hil",
+        "flores_code": "hil_Latn"
+    },
+    {
+        "name": "Sahidic Coptic",
+        "google_code": "sah",
+        "flores_code": "sah_Cop"
+    },
+    {
+        "name": "Bohairic Coptic",
+        "google_code": "boh",
+        "flores_code": "boh_Copt"
+    }
+]
