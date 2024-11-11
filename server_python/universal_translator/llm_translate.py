@@ -11,8 +11,9 @@ languages = json.loads(Path('universal_translator/languages.json').read_text())
 client_anthropic = anthropic.Anthropic(api_key=os.environ['ANTHROPIC_API_KEY'])
 client_openai = openai.OpenAI(api_key=os.environ['OPENAI_API_KEY'])
 
+# TODO: make a choice between google_code or flores_code!
 def get_language(code: str):
-    language = next((language for language in languages if language['flores_code'] == code), None)
+    language = next((language for language in languages if language['google_code'] == code or language['flores_code'] == code), None)
     if not language:
         raise ValueError(f"Invalid code {code}")
     return language
