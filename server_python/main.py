@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 import requests
 from http import HTTPStatus
 from util import degreekify, greekify
-import server_python.universal_translator.llm_translate
+import universal_translator.llm_translate
 
 load_dotenv()
 
@@ -119,6 +119,7 @@ def translate():
             return jsonify({"code": 500, "message": "InternalServerError"}), 500
 
     text = preprocess(src=src, text=text, tgt=tgt)
+    print(f"Translating text {text} from {src} to {tgt}")
     api = (
         ENGLISH_TO_COPTIC_ENDPOINT
         if tgt in COPTIC_LANGUAGES
@@ -158,7 +159,7 @@ def translate_universal():
     src_code, tgt_code, text = req["src_code"], req["tgt_code"], req["text"]
     
     try:
-        translation = server_python.universal_translator.llm_translate.translate_universal(src_code, tgt_code, text)
+        translation = universal_translator.llm_translate.translate_universal(src_code, tgt_code, text)
         return jsonify({"code": 200, "translation": translation}), 200
     except ValueError as e:
         return jsonify({"code": 400, "message": str(e)}), 400
