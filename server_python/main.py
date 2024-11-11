@@ -7,6 +7,7 @@ from dotenv import load_dotenv
 import requests
 from http import HTTPStatus
 from util import degreekify, greekify
+import server_python.universal_translator.llm_translate
 
 load_dotenv()
 
@@ -145,6 +146,26 @@ def translate():
             return jsonify({"code": status, "message": "InputTooLong"}), 422
         case HTTPStatus.OK:
             return postprocess(tgt=tgt, text=translation), 200
+        
+# TODO: we need auth/rate limiting!
+@app.route("/translate_universal", methods=["POST"])
+def translate_universal():
+    req = request.get_json()
+    # Check for required arguments
+    if not all(key in req for key in ["src_code", "tgt_code", "text"]):
+        return jsonify({"code": 400, "message": "Missing required arguments"}), 400
+    
+    src_code, tgt_code, text = req["src_code"], req["tgt_code"], req["text"]
+    
+    try:
+        translation = server_python.universal_translator.llm_translate.translate_universal(src_code, tgt_code, text)
+        return jsonify({"code": 200, "translation": translation}), 200
+    except ValueError as e:
+        return jsonify({"code": 400, "message": str(e)}), 400
+    except Exception as e:
+        print(f"Error: {e}")
+        return jsonify({"code": 500, "message": "InternalServerError"}), 500
+    
 
 if __name__ == "__main__":
     app.run(debug=True, host="0.0.0.0", port=PORT)
