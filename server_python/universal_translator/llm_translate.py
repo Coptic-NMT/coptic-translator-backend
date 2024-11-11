@@ -3,8 +3,11 @@ from pathlib import Path
 import anthropic
 import openai
 import os
+from dotenv import load_dotenv
 
-languages = json.loads(Path('server_python/universal_translator/languages.json').read_text())
+load_dotenv()
+
+languages = json.loads(Path('universal_translator/languages.json').read_text())
 client_anthropic = anthropic.Anthropic(api_key=os.environ['ANTHROPIC_API_KEY'])
 client_openai = openai.OpenAI(api_key=os.environ['OPENAI_API_KEY'])
 
