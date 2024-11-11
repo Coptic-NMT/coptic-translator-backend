@@ -1,8 +1,9 @@
+
 import http
 import os
 import time
 from flask import Flask, request, jsonify
-from googletrans import Translator
+from googletrans import Translator, LANGUAGES as googletrans_languages
 from dotenv import load_dotenv
 import requests
 from http import HTTPStatus
@@ -53,10 +54,44 @@ def gtranslate(text, src, tgt):
     return translator.translate(text, src=src, dest=tgt).text
 
 
+def translate_universal(text: str, src: str, tgt: str):
+    if src in COPTIC_LANGUAGES:
+        pivot_lang = ENGLISH
+        translation, status = get_coptic_translation(text, src, pivot_lang)
+
+        if status != 200:
+            return translation, status
+        
+        if tgt == pivot_lang:
+            return translation, 200
+        
+        return translate_universal(translation, pivot_lang, tgt)
+        
+    if tgt in COPTIC_LANGUAGES:
+        pivot_lang = ENGLISH
+        if src == pivot_lang:
+            return get_coptic_translation(text, src, tgt)
+        
+        pivot_translation, status = translate_universal(text, src, pivot_lang)
+        if status != 200:
+            return pivot_translation, status
+        
+        return translate_universal(pivot_translation, pivot_lang, tgt)
+
+    # Use googletrans, when possible
+    if src in googletrans_languages and tgt in googletrans_languages:
+        translation = gtranslate(text, src, tgt)
+        return translation, 200
+    
+    # Otherwise, just use our universal translator
+    translation = universal_translator.llm_translate.translate_universal(src, tgt, text)
+    return translation, 200
+
+
 # Only when one of src or tgt is coptic
 def preprocess(src, text, tgt):
     if src != ENGLISH and src not in COPTIC_LANGUAGES:
-        text = gtranslate(text, src, ENGLISH)
+        raise ValueError(f"Invalid preprocessing of {src} to {tgt}")
 
     if src in COPTIC_LANGUAGES:
         text = greekify(text.lower())
@@ -70,12 +105,25 @@ def preprocess(src, text, tgt):
 def postprocess(tgt, text):
     if tgt in COPTIC_LANGUAGES:
         text = degreekify(text)
-    elif tgt != ENGLISH:
-        text = gtranslate(text, ENGLISH, tgt)
-    return jsonify({"code": 200, "translation": text})
+    return text
 
 
-def get_translation(api, text):
+def get_coptic_translation(text, src, tgt):
+    if (src in COPTIC_LANGUAGES and tgt != ENGLISH) or (tgt in COPTIC_LANGUAGES and src != ENGLISH):
+        raise ValueError(f"Cannot run coptic translation from {src} to {tgt}")
+    if src not in COPTIC_LANGUAGES and tgt not in COPTIC_LANGUAGES:
+        raise ValueError(f"Cannot run coptic translation from {src} to {tgt}")
+
+    text = preprocess(src, text, tgt)
+    
+    api = (
+        ENGLISH_TO_COPTIC_ENDPOINT
+        if tgt in COPTIC_LANGUAGES
+        else COPTIC_TO_ENGLISH_ENDPOINT
+    )
+    if src in COPTIC_LANGUAGES and tgt in COPTIC_LANGUAGES:
+        api = COPTIC_TO_ENGLISH_ENDPOINT
+
     instance = {
         "inputs": [text],
         "parameters": GENERATION_CONFIG,
@@ -103,6 +151,7 @@ def get_translation(api, text):
             print(f"Error: {e}")
             continue
 
+    translation = postprocess(tgt, translation)
     return translation, status
 
 
@@ -110,35 +159,11 @@ def get_translation(api, text):
 def translate():
     req = request.get_json()
     src, tgt, text = req["src"], req["tgt"], req["text"]
-    print(f"src: {src}, tgt: {tgt}, text: {text}")
-    if src not in COPTIC_LANGUAGES and tgt not in COPTIC_LANGUAGES:
-        try:
-            return postprocess(tgt=tgt, text=gtranslate(text, src, tgt)), 200
-        except Exception as e:
-            print(f"Error: {e}")
-            return jsonify({"code": 500, "message": "InternalServerError"}), 500
 
-    text = preprocess(src=src, text=text, tgt=tgt)
-    print(f"Translating text {text} from {src} to {tgt}")
-    api = (
-        ENGLISH_TO_COPTIC_ENDPOINT
-        if tgt in COPTIC_LANGUAGES
-        else COPTIC_TO_ENGLISH_ENDPOINT
-    )
-    if src in COPTIC_LANGUAGES and tgt in COPTIC_LANGUAGES:
-        api = COPTIC_TO_ENGLISH_ENDPOINT
-
-    translation, status = get_translation(api, text)
-    match status:
-        case HTTPStatus.INTERNAL_SERVER_ERROR:
-            return jsonify({"code": status, "message": "InternalServerError"}), 500
-        case HTTPStatus.UNPROCESSABLE_ENTITY:
-            return jsonify({"code": status, "message": "InputTooLong"}), 422
-
-    if src in COPTIC_LANGUAGES and tgt in COPTIC_LANGUAGES:
-        text = preprocess(src=ENGLISH, text=translation, tgt=tgt)
-        api = ENGLISH_TO_COPTIC_ENDPOINT
-        translation, status = get_translation(api, text)
+    try:
+        translation, status = translate_universal(text, src, tgt)
+    except Exception as e:
+        translation, status = "", 500
 
     match status:
         case HTTPStatus.INTERNAL_SERVER_ERROR:
@@ -146,26 +171,7 @@ def translate():
         case HTTPStatus.UNPROCESSABLE_ENTITY:
             return jsonify({"code": status, "message": "InputTooLong"}), 422
         case HTTPStatus.OK:
-            return postprocess(tgt=tgt, text=translation), 200
-        
-# TODO: we need auth/rate limiting!
-@app.route("/translate_universal", methods=["POST"])
-def translate_universal():
-    req = request.get_json()
-    # Check for required arguments
-    if not all(key in req for key in ["src_code", "tgt_code", "text"]):
-        return jsonify({"code": 400, "message": "Missing required arguments"}), 400
-    
-    src_code, tgt_code, text = req["src_code"], req["tgt_code"], req["text"]
-    
-    try:
-        translation = universal_translator.llm_translate.translate_universal(src_code, tgt_code, text)
-        return jsonify({"code": 200, "translation": translation}), 200
-    except ValueError as e:
-        return jsonify({"code": 400, "message": str(e)}), 400
-    except Exception as e:
-        print(f"Error: {e}")
-        return jsonify({"code": 500, "message": "InternalServerError"}), 500
+            return translation, status
     
 
 if __name__ == "__main__":
