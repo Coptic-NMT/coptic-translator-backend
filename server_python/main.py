@@ -132,7 +132,6 @@ def get_coptic_translation(text, src, tgt):
 
     translation = None
     status = None
-
     for _ in range(MAX_RETRIES):
         try:
             response = requests.post(api, json=instance, headers=HEADERS)
@@ -175,7 +174,7 @@ def translate():
         case HTTPStatus.BAD_REQUEST:
             return jsonify({"code": status, "message": f"Invalid source or target language"})
         case HTTPStatus.OK:
-            return translation, status
+            return jsonify({"code": status, "translation": translation})
         case _:
             return jsonify({"code": 500, "message": f"Unknown status code {status}"})
 
