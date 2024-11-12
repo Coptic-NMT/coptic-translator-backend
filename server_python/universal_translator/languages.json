@@ -1,507 +1,2765 @@
 [
     {
-        "name": "English",
-        "google_code": "en",
-        "flores_code": "eng_Latn"
-    },
-    {
-        "name": "Mandarin Chinese",
-        "google_code": "zh-CN",
-        "flores_code": "zho_Hans"
-    },
-    {
-        "name": "Spanish",
-        "google_code": "es",
-        "flores_code": "spa_Latn"
-    },
-    {
-        "name": "Hindi",
-        "google_code": "hi",
-        "flores_code": "hin_Deva"
-    },
-    {
-        "name": "Bengali",
-        "google_code": "bn",
-        "flores_code": "ben_Beng"
-    },
-    {
-        "name": "Portuguese",
-        "google_code": "pt",
-        "flores_code": "por_Latn"
-    },
-    {
-        "name": "Russian",
-        "google_code": "ru",
-        "flores_code": "rus_Cyrl"
-    },
-    {
-        "name": "Japanese",
-        "google_code": "ja",
-        "flores_code": "jpn_Jpan"
-    },
-    {
-        "name": "Western Punjabi",
-        "google_code": "pa",
-        "flores_code": "pan_Arab"
-    },
-    {
-        "name": "Marathi",
-        "google_code": "mr",
-        "flores_code": "mar_Deva"
-    },
-    {
-        "name": "Telugu",
-        "google_code": "te",
-        "flores_code": "tel_Telu"
-    },
-    {
-        "name": "Wu Chinese",
-        "google_code": "wuu",
-        "flores_code": "wuu_Hans"
-    },
-    {
-        "name": "Turkish",
-        "google_code": "tr",
-        "flores_code": "tur_Latn"
-    },
-    {
-        "name": "Korean",
-        "google_code": "ko",
-        "flores_code": "kor_Hang"
-    },
-    {
-        "name": "French",
-        "google_code": "fr",
-        "flores_code": "fra_Latn"
-    },
-    {
-        "name": "German",
-        "google_code": "de",
-        "flores_code": "deu_Latn"
-    },
-    {
-        "name": "Vietnamese",
-        "google_code": "vi",
-        "flores_code": "vie_Latn"
-    },
-    {
-        "name": "Tamil",
-        "google_code": "ta",
-        "flores_code": "tam_Taml"
-    },
-    {
-        "name": "Yue Chinese",
-        "google_code": "yue",
-        "flores_code": "yue_Hant"
-    },
-    {
-        "name": "Urdu",
-        "google_code": "ur",
-        "flores_code": "urd_Arab"
-    },
-    {
-        "name": "Javanese",
-        "google_code": "jv",
-        "flores_code": "jav_Latn"
-    },
-    {
-        "name": "Italian",
-        "google_code": "it",
-        "flores_code": "ita_Latn"
-    },
-    {
-        "name": "Egyptian Arabic",
-        "google_code": "arz",
-        "flores_code": "arz_Arab"
-    },
-    {
-        "name": "Gujarati",
-        "google_code": "gu",
-        "flores_code": "guj_Gujr"
-    },
-    {
-        "name": "Iranian Persian",
-        "google_code": "fa",
-        "flores_code": "pes_Arab"
-    },
-    {
-        "name": "Bhojpuri",
-        "google_code": "bho",
-        "flores_code": "bho_Deva"
-    },
-    {
-        "name": "Min Nan Chinese",
-        "google_code": "nan",
-        "flores_code": "nan_Hani"
-    },
-    {
-        "name": "Hakka Chinese",
-        "google_code": "hak",
-        "flores_code": "hak_Hani"
-    },
-    {
-        "name": "Jin Chinese",
-        "google_code": "cjy",
-        "flores_code": "cjy_Hani"
-    },
-    {
-        "name": "Hausa",
-        "google_code": "ha",
-        "flores_code": "hau_Latn"
-    },
-    {
-        "name": "Polish",
-        "google_code": "pl",
-        "flores_code": "pol_Latn"
-    },
-    {
-        "name": "Yoruba",
-        "google_code": "yo",
-        "flores_code": "yor_Latn"
-    },
-    {
-        "name": "Malayalam",
-        "google_code": "ml",
-        "flores_code": "mal_Mlym"
-    },
-    {
-        "name": "Odia",
-        "google_code": "or",
-        "flores_code": "ory_Orya"
-    },
-    {
-        "name": "Burmese",
-        "google_code": "my",
-        "flores_code": "mya_Mymr"
-    },
-    {
-        "name": "Sundanese",
-        "google_code": "su",
-        "flores_code": "sun_Latn"
-    },
-    {
-        "name": "Ukrainian",
-        "google_code": "uk",
-        "flores_code": "ukr_Cyrl"
-    },
-    {
-        "name": "Igbo",
-        "google_code": "ig",
-        "flores_code": "ibo_Latn"
-    },
-    {
-        "name": "Tagalog",
-        "google_code": "tl",
-        "flores_code": "tgl_Latn"
-    },
-    {
-        "name": "Xiang Chinese",
-        "google_code": "hsn",
-        "flores_code": "hsn_Hani"
-    },
-    {
-        "name": "Maithili",
-        "google_code": "mai",
-        "flores_code": "mai_Deva"
-    },
-    {
-        "name": "Kannada",
-        "google_code": "kn",
-        "flores_code": "kan_Knda"
-    },
-    {
-        "name": "Sinhala",
-        "google_code": "si",
-        "flores_code": "sin_Sinh"
-    },
-    {
-        "name": "Amharic",
-        "google_code": "am",
-        "flores_code": "amh_Ethi"
-    },
-    {
-        "name": "Moroccan Arabic",
-        "google_code": "ary",
-        "flores_code": "ary_Arab"
-    },
-    {
-        "name": "Northern Uzbek",
-        "google_code": "uz",
-        "flores_code": "uzb_Latn"
-    },
-    {
-        "name": "Sindhi",
-        "google_code": "sd",
-        "flores_code": "snd_Arab"
-    },
-    {
-        "name": "Northern Pashto",
-        "google_code": "ps",
-        "flores_code": "pbu_Arab"
-    },
-    {
-        "name": "Nigerian Fulfulde",
-        "google_code": "fuv",
-        "flores_code": "fuv_Latn"
-    },
-    {
-        "name": "Romanian",
-        "google_code": "ro",
-        "flores_code": "ron_Latn"
-    },
-    {
-        "name": "Dutch",
-        "google_code": "nl",
-        "flores_code": "nld_Latn"
-    },
-    {
-        "name": "Gan Chinese",
-        "google_code": "gan",
-        "flores_code": "gan_Hani"
-    },
-    {
-        "name": "Thai",
-        "google_code": "th",
-        "flores_code": "tha_Thai"
-    },
-    {
-        "name": "Cebuano",
-        "google_code": "ceb",
-        "flores_code": "ceb_Latn"
-    },
-    {
-        "name": "Nepali",
-        "google_code": "ne",
-        "flores_code": "nep_Deva"
-    },
-    {
-        "name": "Saraiki",
-        "google_code": "skr",
-        "flores_code": "skr_Arab"
-    },
-    {
-        "name": "Malagasy",
-        "google_code": "mg",
-        "flores_code": "plt_Latn"
-    },
-    {
-        "name": "Sudanese Arabic",
-        "google_code": "apd",
-        "flores_code": "apd_Arab"
-    },
-    {
-        "name": "Assamese",
-        "google_code": "as",
-        "flores_code": "asm_Beng"
-    },
-    {
-        "name": "Sinhalese",
-        "google_code": "si",
-        "flores_code": "sin_Sinh"
-    },
-    {
-        "name": "Northern Kurdish",
-        "google_code": "kmr",
-        "flores_code": "kmr_Latn"
-    },
-    {
-        "name": "Zulu",
-        "google_code": "zu",
-        "flores_code": "zul_Latn"
-    },
-    {
-        "name": "Bavarian",
-        "google_code": "bar",
-        "flores_code": "bar_Latn"
-    },
-    {
-        "name": "Kinyarwanda",
-        "google_code": "rw",
-        "flores_code": "kin_Latn"
-    },
-    {
-        "name": "Ilocano",
-        "google_code": "ilo",
-        "flores_code": "ilo_Latn"
-    },
-    {
-        "name": "Sylheti",
-        "google_code": "syl",
-        "flores_code": "syl_Beng"
-    },
-    {
-        "name": "Rangpuri",
-        "google_code": "rkt",
-        "flores_code": "rkt_Beng"
-    },
-    {
-        "name": "Okinawan",
-        "google_code": "ryu",
-        "flores_code": "ryu_Jpan"
-    },
-    {
-        "name": "Hijazi Arabic",
-        "google_code": "acw",
-        "flores_code": "acw_Arab"
-    },
-    {
-        "name": "Eastern Punjabi",
-        "google_code": "pa",
-        "flores_code": "pan_Guru"
-    },
-    {
-        "name": "Chittagonian",
-        "google_code": "ctg",
-        "flores_code": "ctg_Beng"
-    },
-    {
-        "name": "Somali",
-        "google_code": "so",
-        "flores_code": "som_Latn"
-    },
-    {
-        "name": "Madurese",
-        "google_code": "mad",
-        "flores_code": "mad_Latn"
-    },
-    {
-        "name": "Magahi",
-        "google_code": "mag",
-        "flores_code": "mag_Deva"
-    },
-    {
-        "name": "Haryanvi",
-        "google_code": "bgc",
-        "flores_code": "bgc_Deva"
-    },
-    {
-        "name": "Chhattisgarhi",
-        "google_code": "hne",
-        "flores_code": "hne_Deva"
-    },
-    {
-        "name": "Chewa",
-        "google_code": "ny",
-        "flores_code": "nya_Latn"
-    },
-    {
-        "name": "Deccan",
-        "google_code": "dcc",
-        "flores_code": "dcc_Arab"
-    },
-    {
-        "name": "Tswana",
-        "google_code": "tn",
-        "flores_code": "tsn_Latn"
-    },
-    {
-        "name": "Belarusian",
-        "google_code": "be",
-        "flores_code": "bel_Cyrl"
-    },
-    {
-        "name": "Uyghur",
-        "google_code": "ug",
-        "flores_code": "uig_Arab"
-    },
-    {
-        "name": "Lombard",
-        "google_code": "lmo",
-        "flores_code": "lmo_Latn"
-    },
-    {
-        "name": "Oromo",
-        "google_code": "om",
-        "flores_code": "orm_Latn"
-    },
-    {
-        "name": "Malay",
-        "google_code": "ms",
-        "flores_code": "zsm_Latn"
-    },
-    {
-        "name": "Bashkir",
-        "google_code": "ba",
-        "flores_code": "bak_Cyrl"
-    },
-    {
-        "name": "Awadhi",
-        "google_code": "awa",
-        "flores_code": "awa_Deva"
-    },
-    {
-        "name": "Azerbaijani",
-        "google_code": "az",
-        "flores_code": "azj_Latn"
-    },
-    {
-        "name": "Yiddish",
-        "google_code": "yi",
-        "flores_code": "ydd_Hebr"
-    },
-    {
-        "name": "Haitian Creole",
-        "google_code": "ht",
-        "flores_code": "hat_Latn"
-    },
-    {
-        "name": "Fula",
-        "google_code": "ff",
-        "flores_code": "ful_Latn"
-    },
-    {
-        "name": "Napoletano-Calabrese",
-        "google_code": "nap",
-        "flores_code": "nap_Latn"
-    },
-    {
-        "name": "Northern Min",
-        "google_code": "cdo",
-        "flores_code": "cdo_Hani"
-    },
-    {
-        "name": "Kazakh",
-        "google_code": "kk",
-        "flores_code": "kaz_Cyrl"
-    },
-    {
-        "name": "Mingrelian",
-        "google_code": "xmf",
-        "flores_code": "xmf_Geor"
-    },
-    {
-        "name": "Santali",
-        "google_code": "sat",
-        "flores_code": "sat_Olck"
-    },
-    {
-        "name": "Bagheli",
-        "google_code": "bfy",
-        "flores_code": "bfy_Deva"
-    },
-    {
-        "name": "Khmer",
-        "google_code": "km",
-        "flores_code": "khm_Khmr"
-    },
-    {
-        "name": "Shona",
-        "google_code": "sn",
-        "flores_code": "sna_Latn"
-    },
-    {
-        "name": "Hiligaynon",
-        "google_code": "hil",
-        "flores_code": "hil_Latn"
-    },
-    {
-        "name": "Sahidic Coptic",
-        "google_code": "sah",
-        "flores_code": "sah_Cop"
-    },
-    {
-        "name": "Bohairic Coptic",
-        "google_code": "boh",
-        "flores_code": "boh_Copt"
+      "name": "English",
+      "google_code": "en",
+      "flores_code": "eng_Latn",
+      "estimated_speakers": 1452000000,
+      "relevant_languages": [
+        "spa_Latn",
+        "fra_Latn",
+        "deu_Latn",
+        "ita_Latn",
+        "por_Latn",
+        "zho_Hans",
+        "hin_Deva",
+        "arb_Arab",
+        "rus_Cyrl",
+        "jpn_Jpan"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Mandarin Chinese",
+      "google_code": "zh-CN",
+      "flores_code": "zho_Hans",
+      "estimated_speakers": 1117000000,
+      "relevant_languages": [
+        "yue_Hant",
+        "zho_Hant",
+        "eng_Latn",
+        "wuu_Hans",
+        "nan_Hani",
+        "hak_Hani",
+        "cjy_Hani",
+        "gan_Hani"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Traditional Chinese",
+      "google_code": "zh-TW",
+      "flores_code": "zho_Hant",
+      "estimated_speakers": 100000000,
+      "relevant_languages": [
+        "yue_Hant",
+        "zho_Hans",
+        "eng_Latn",
+        "nan_Hani",
+        "hak_Hani"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Cantonese",
+      "google_code": "yue",
+      "flores_code": "yue_Hant",
+      "estimated_speakers": 85000000,
+      "relevant_languages": [
+        "zho_Hans",
+        "zho_Hant",
+        "eng_Latn"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Spanish",
+      "google_code": "es",
+      "flores_code": "spa_Latn",
+      "estimated_speakers": 534000000,
+      "relevant_languages": [
+        "eng_Latn",
+        "por_Latn",
+        "fra_Latn",
+        "ita_Latn",
+        "cat_Latn",
+        "glg_Latn"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Galician",
+      "google_code": "gl", 
+      "flores_code": "glg_Latn",
+      "estimated_speakers": 1000000,
+      "relevant_languages": [
+        "eng_Latn",
+        "spa_Latn",
+        "por_Latn",
+        "fra_Latn",
+        "ita_Latn",
+        "cat_Latn"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Catalan",
+      "google_code": "ca",
+      "flores_code": "cat_Latn",
+      "estimated_speakers": 10000000,
+      "relevant_languages": [
+        "eng_Latn",
+        "spa_Latn",
+        "fra_Latn",
+        "ita_Latn",
+        "glg_Latn"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Hindi",
+      "google_code": "hi",
+      "flores_code": "hin_Deva",
+      "estimated_speakers": 600000000,
+      "relevant_languages": [
+        "eng_Latn",
+        "urd_Arab",
+        "ben_Beng",
+        "mar_Deva",
+        "guj_Gujr",
+        "pan_Guru"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Bengali",
+      "google_code": "bn",
+      "flores_code": "ben_Beng",
+      "estimated_speakers": 265000000,
+      "relevant_languages": [
+        "eng_Latn",
+        "hin_Deva",
+        "urd_Arab",
+        "asm_Beng"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Portuguese",
+      "google_code": "pt",
+      "flores_code": "por_Latn",
+      "estimated_speakers": 258000000,
+      "relevant_languages": [
+        "eng_Latn",
+        "spa_Latn",
+        "fra_Latn",
+        "ita_Latn",
+        "glg_Latn"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Russian",
+      "google_code": "ru",
+      "flores_code": "rus_Cyrl",
+      "estimated_speakers": 258000000,
+      "relevant_languages": [
+        "ukr_Cyrl",
+        "bel_Cyrl",
+        "eng_Latn",
+        "kaz_Cyrl",
+        "uzb_Latn"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Japanese",
+      "google_code": "ja",
+      "flores_code": "jpn_Jpan",
+      "estimated_speakers": 128000000,
+      "relevant_languages": [
+        "eng_Latn",
+        "zho_Hans",
+        "kor_Hang",
+        "ryu_Jpan"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Western Punjabi",
+      "google_code": "pa",
+      "flores_code": "pan_Arab",
+      "estimated_speakers": 93000000,
+      "relevant_languages": [
+        "eng_Latn",
+        "urd_Arab",
+        "hin_Deva",
+        "pan_Guru"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Marathi",
+      "google_code": "mr",
+      "flores_code": "mar_Deva",
+      "estimated_speakers": 83000000,
+      "relevant_languages": [
+        "eng_Latn",
+        "hin_Deva",
+        "guj_Gujr",
+        "kon_Deva"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Konkani",
+      "google_code": "kok",
+      "flores_code": "kon_Deva",
+      "estimated_speakers": 2300000,
+      "relevant_languages": [
+        "eng_Latn",
+        "hin_Deva",
+        "mar_Deva",
+        "guj_Gujr"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Telugu",
+      "google_code": "te",
+      "flores_code": "tel_Telu",
+      "estimated_speakers": 93000000,
+      "relevant_languages": [
+        "eng_Latn",
+        "hin_Deva",
+        "tam_Taml",
+        "kan_Knda"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Wu Chinese",
+      "google_code": "wuu",
+      "flores_code": "wuu_Hans",
+      "estimated_speakers": 81000000,
+      "relevant_languages": [
+        "zho_Hans",
+        "yue_Hant",
+        "eng_Latn"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Turkish",
+      "google_code": "tr",
+      "flores_code": "tur_Latn",
+      "estimated_speakers": 88000000,
+      "relevant_languages": [
+        "eng_Latn",
+        "azj_Latn",
+        "kmr_Latn",
+        "deu_Latn",
+        "arb_Arab"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Korean",
+      "google_code": "ko",
+      "flores_code": "kor_Hang",
+      "estimated_speakers": 77000000,
+      "relevant_languages": [
+        "eng_Latn",
+        "jpn_Jpan",
+        "zho_Hans"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "French",
+      "google_code": "fr",
+      "flores_code": "fra_Latn",
+      "estimated_speakers": 274000000,
+      "relevant_languages": [
+        "eng_Latn",
+        "spa_Latn",
+        "deu_Latn",
+        "ita_Latn",
+        "arb_Arab",
+        "por_Latn"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "German",
+      "google_code": "de",
+      "flores_code": "deu_Latn",
+      "estimated_speakers": 132000000,
+      "relevant_languages": [
+        "eng_Latn",
+        "fra_Latn",
+        "nld_Latn",
+        "ita_Latn",
+        "pol_Latn",
+        "rus_Cyrl"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Vietnamese",
+      "google_code": "vi",
+      "flores_code": "vie_Latn",
+      "estimated_speakers": 85000000,
+      "relevant_languages": [
+        "eng_Latn",
+        "zho_Hans",
+        "fra_Latn",
+        "khm_Khmr"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Tamil",
+      "google_code": "ta",
+      "flores_code": "tam_Taml",
+      "estimated_speakers": 75000000,
+      "relevant_languages": [
+        "eng_Latn",
+        "hin_Deva",
+        "tel_Telu",
+        "mal_Mlym",
+        "sin_Sinh"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Urdu",
+      "google_code": "ur",
+      "flores_code": "urd_Arab",
+      "estimated_speakers": 170000000,
+      "relevant_languages": [
+        "eng_Latn",
+        "hin_Deva",
+        "pan_Arab",
+        "arb_Arab",
+        "pes_Arab"
+      ],
+      "left_to_right": false
+    },
+    {
+      "name": "Javanese",
+      "google_code": "jv",
+      "flores_code": "jav_Latn",
+      "estimated_speakers": 82000000,
+      "relevant_languages": [
+        "ind_Latn",
+        "eng_Latn",
+        "sun_Latn"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Italian",
+      "google_code": "it",
+      "flores_code": "ita_Latn",
+      "estimated_speakers": 68000000,
+      "relevant_languages": [
+        "eng_Latn",
+        "fra_Latn",
+        "spa_Latn",
+        "deu_Latn",
+        "nap_Latn",
+        "scn_Latn"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Egyptian Arabic",
+      "google_code": "arz",
+      "flores_code": "arz_Arab",
+      "estimated_speakers": 65000000,
+      "relevant_languages": [
+        "arb_Arab",
+        "eng_Latn",
+        "fra_Latn"
+      ],
+      "left_to_right": false
+    },
+    {
+      "name": "Gujarati",
+      "google_code": "gu",
+      "flores_code": "guj_Gujr",
+      "estimated_speakers": 56000000,
+      "relevant_languages": [
+        "eng_Latn",
+        "hin_Deva",
+        "mar_Deva"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Western Persian",
+      "google_code": "fa",
+      "flores_code": "pes_Arab",
+      "estimated_speakers": 62000000,
+      "relevant_languages": [
+        "eng_Latn",
+        "kmr_Latn",
+        "tur_Latn",
+        "arb_Arab"
+      ],
+      "left_to_right": false
+    },
+    {
+      "name": "Bhojpuri",
+      "google_code": "bho",
+      "flores_code": "bho_Deva",
+      "estimated_speakers": 51000000,
+      "relevant_languages": [
+        "eng_Latn",
+        "hin_Deva",
+        "urd_Arab",
+        "mag_Deva"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Min Nan Chinese",
+      "google_code": "nan",
+      "flores_code": "nan_Hani",
+      "estimated_speakers": 49000000,
+      "relevant_languages": [
+        "zho_Hans",
+        "yue_Hant",
+        "eng_Latn"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Hakka Chinese",
+      "google_code": "hak",
+      "flores_code": "hak_Hani",
+      "estimated_speakers": 44000000,
+      "relevant_languages": [
+        "zho_Hans",
+        "yue_Hant",
+        "eng_Latn"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Jin Chinese",
+      "google_code": "cjy",
+      "flores_code": "cjy_Hani",
+      "estimated_speakers": 63000000,
+      "relevant_languages": [
+        "zho_Hans",
+        "yue_Hant",
+        "eng_Latn"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Hausa",
+      "google_code": "ha",
+      "flores_code": "hau_Latn",
+      "estimated_speakers": 63000000,
+      "relevant_languages": [
+        "eng_Latn",
+        "fra_Latn",
+        "arb_Arab"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Polish",
+      "google_code": "pl",
+      "flores_code": "pol_Latn",
+      "estimated_speakers": 45000000,
+      "relevant_languages": [
+        "eng_Latn",
+        "deu_Latn",
+        "rus_Cyrl",
+        "ukr_Cyrl"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Yoruba",
+      "google_code": "yo",
+      "flores_code": "yor_Latn",
+      "estimated_speakers": 45000000,
+      "relevant_languages": [
+        "eng_Latn",
+        "fra_Latn",
+        "hau_Latn"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Malayalam",
+      "google_code": "ml",
+      "flores_code": "mal_Mlym",
+      "estimated_speakers": 38000000,
+      "relevant_languages": [
+        "eng_Latn",
+        "tam_Taml",
+        "hin_Deva",
+        "kan_Knda"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Odia",
+      "google_code": "or",
+      "flores_code": "ory_Orya",
+      "estimated_speakers": 35000000,
+      "relevant_languages": [
+        "eng_Latn",
+        "hin_Deva",
+        "ben_Beng"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Burmese",
+      "google_code": "my",
+      "flores_code": "mya_Mymr",
+      "estimated_speakers": 33000000,
+      "relevant_languages": [
+        "eng_Latn",
+        "zho_Hans",
+        "tha_Thai"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Sundanese",
+      "google_code": "su",
+      "flores_code": "sun_Latn",
+      "estimated_speakers": 42000000,
+      "relevant_languages": [
+        "ind_Latn",
+        "eng_Latn",
+        "jav_Latn"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Indonesian",
+      "google_code": "id",
+      "flores_code": "ind_Latn",
+      "estimated_speakers": 43000000,
+      "relevant_languages": [
+        "eng_Latn",
+        "jav_Latn",
+        "sun_Latn",
+        "zsm_Latn"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Ukrainian",
+      "google_code": "uk",
+      "flores_code": "ukr_Cyrl",
+      "estimated_speakers": 45000000,
+      "relevant_languages": [
+        "rus_Cyrl",
+        "eng_Latn",
+        "pol_Latn"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Igbo",
+      "google_code": "ig",
+      "flores_code": "ibo_Latn",
+      "estimated_speakers": 30000000,
+      "relevant_languages": [
+        "eng_Latn",
+        "fra_Latn",
+        "yor_Latn"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Tagalog",
+      "google_code": "tl",
+      "flores_code": "tgl_Latn",
+      "estimated_speakers": 28000000,
+      "relevant_languages": [
+        "eng_Latn",
+        "ceb_Latn",
+        "ilo_Latn",
+        "hil_Latn"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Xiang Chinese",
+      "google_code": "hsn",
+      "flores_code": "hsn_Hani",
+      "estimated_speakers": 38000000,
+      "relevant_languages": [
+        "zho_Hans",
+        "yue_Hant",
+        "eng_Latn"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Maithili",
+      "google_code": "mai",
+      "flores_code": "mai_Deva",
+      "estimated_speakers": 34000000,
+      "relevant_languages": [
+        "eng_Latn",
+        "hin_Deva",
+        "bho_Deva",
+        "ben_Beng"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Kannada",
+      "google_code": "kn",
+      "flores_code": "kan_Knda",
+      "estimated_speakers": 45000000,
+      "relevant_languages": [
+        "eng_Latn",
+        "hin_Deva",
+        "tel_Telu",
+        "tam_Taml"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Sinhala",
+      "google_code": "si",
+      "flores_code": "sin_Sinh",
+      "estimated_speakers": 17000000,
+      "relevant_languages": [
+        "eng_Latn",
+        "tam_Taml"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Amharic",
+      "google_code": "am",
+      "flores_code": "amh_Ethi",
+      "estimated_speakers": 32000000,
+      "relevant_languages": [
+        "eng_Latn",
+        "arb_Arab",
+        "orm_Latn",
+        "som_Latn",
+        "tir_Ethi"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Tigrinya",
+      "google_code": "ti",
+      "flores_code": "tir_Ethi",
+      "estimated_speakers": 6500000,
+      "relevant_languages": [
+        "eng_Latn",
+        "amh_Ethi",
+        "orm_Latn",
+        "som_Latn",
+        "arb_Arab"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Modern Standard Arabic",
+      "google_code": "ar",
+      "flores_code": "arb_Arab",
+      "estimated_speakers": 274000000,
+      "relevant_languages": [
+        "eng_Latn",
+        "arz_Arab",
+        "fra_Latn",
+        "deu_Latn",
+        "ary_Arab",
+        "pes_Arab",
+        "acw_Arab",
+        "heb_Hebr",
+        "tur_Latn"
+      ],
+      "left_to_right": false
+    },
+    {
+      "name": "Hebrew",
+      "google_code": "he",
+      "flores_code": "heb_Hebr",
+      "estimated_speakers": 9000000,
+      "relevant_languages": [
+        "eng_Latn",
+        "arb_Arab",
+        "fra_Latn",
+        "rus_Cyrl",
+        "tur_Latn"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Moroccan Arabic",
+      "google_code": "ary",
+      "flores_code": "ary_Arab",
+      "estimated_speakers": 32000000,
+      "relevant_languages": [
+        "arb_Arab",
+        "fra_Latn",
+        "eng_Latn",
+        "spa_Latn",
+        "ber_Tfng"
+      ],
+      "left_to_right": false
+    },
+    {
+      "name": "Berber",
+      "google_code": "ber",
+      "flores_code": "ber_Tfng",
+      "estimated_speakers": 15000000,
+      "relevant_languages": [
+        "arb_Arab",
+        "fra_Latn",
+        "spa_Latn",
+        "eng_Latn"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Northern Uzbek",
+      "google_code": "uz",
+      "flores_code": "uzb_Latn",
+      "estimated_speakers": 27000000,
+      "relevant_languages": [
+        "rus_Cyrl",
+        "eng_Latn",
+        "kaz_Cyrl",
+        "tgk_Cyrl",
+        "kir_Cyrl"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Kyrgyz",
+      "google_code": "ky",
+      "flores_code": "kir_Cyrl",
+      "estimated_speakers": 4500000,
+      "relevant_languages": [
+        "rus_Cyrl",
+        "eng_Latn",
+        "uzb_Latn",
+        "kaz_Cyrl",
+        "tgk_Cyrl"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Tajik",
+      "google_code": "tg",
+      "flores_code": "tgk_Cyrl",
+      "estimated_speakers": 8000000,
+      "relevant_languages": [
+        "rus_Cyrl",
+        "eng_Latn",
+        "uzb_Latn",
+        "prs_Arab",
+        "pes_Arab"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Dari",
+      "google_code": "fa",
+      "flores_code": "prs_Arab",
+      "estimated_speakers": 9000000,
+      "relevant_languages": [
+        "eng_Latn",
+        "urd_Arab",
+        "pes_Arab",
+        "tgk_Cyrl",
+        "hnd_Arab"
+      ],
+      "left_to_right": false
+    },
+    {
+      "name": "Hindustani Arabic",
+      "google_code": "hnd",
+      "flores_code": "hnd_Arab",
+      "estimated_speakers": 10000000,
+      "relevant_languages": [
+        "eng_Latn",
+        "urd_Arab",
+        "hin_Deva",
+        "pan_Guru",
+        "pes_Arab"
+      ],
+      "left_to_right": false
+    },
+    {
+      "name": "Sindhi",
+      "google_code": "sd",
+      "flores_code": "snd_Arab",
+      "estimated_speakers": 32000000,
+      "relevant_languages": [
+        "eng_Latn",
+        "urd_Arab",
+        "hin_Deva",
+        "pan_Guru",
+        "guj_Gujr"
+      ],
+      "left_to_right": false
+    },
+    {
+      "name": "Northern Pashto",
+      "google_code": "ps",
+      "flores_code": "pbu_Arab",
+      "estimated_speakers": 40000000,
+      "relevant_languages": [
+        "eng_Latn",
+        "urd_Arab",
+        "pes_Arab",
+        "prs_Arab",
+        "hnd_Arab"
+      ],
+      "left_to_right": false
+    },
+    {
+      "name": "Nigerian Pidgin",
+      "google_code": "pcm",
+      "flores_code": "pcm_Latn",
+      "estimated_speakers": 75000000,
+      "relevant_languages": [
+        "eng_Latn",
+        "yor_Latn",
+        "ibo_Latn",
+        "hau_Latn",
+        "bin_Latn"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Bini",
+      "google_code": "bin",
+      "flores_code": "bin_Latn",
+      "estimated_speakers": 1000000,
+      "relevant_languages": [
+        "eng_Latn",
+        "yor_Latn",
+        "ibo_Latn",
+        "hau_Latn",
+        "pcm_Latn"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Nigerian Fulfulde",
+      "google_code": "fuv",
+      "flores_code": "fuv_Latn",
+      "estimated_speakers": 25000000,
+      "relevant_languages": [
+        "eng_Latn",
+        "fra_Latn",
+        "hau_Latn",
+        "yor_Latn",
+        "arb_Arab"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Romanian",
+      "google_code": "ro",
+      "flores_code": "ron_Latn",
+      "estimated_speakers": 24000000,
+      "relevant_languages": [
+        "eng_Latn",
+        "fra_Latn",
+        "ita_Latn",
+        "deu_Latn",
+        "hun_Latn",
+        "rus_Cyrl"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Hungarian",
+      "google_code": "hu",
+      "flores_code": "hun_Latn",
+      "estimated_speakers": 9900000,
+      "relevant_languages": [
+        "eng_Latn",
+        "deu_Latn",
+        "fra_Latn",
+        "ita_Latn",
+        "slk_Latn",
+        "pol_Latn"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Dutch",
+      "google_code": "nl",
+      "flores_code": "nld_Latn",
+      "estimated_speakers": 25000000,
+      "relevant_languages": [
+        "eng_Latn",
+        "deu_Latn",
+        "fra_Latn",
+        "fry_Latn",
+        "nds_Latn",
+        "lim_Latn"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Limburgish",
+      "google_code": "li",
+      "flores_code": "lim_Latn",
+      "estimated_speakers": 1,
+      "relevant_languages": [
+        "eng_Latn",
+        "deu_Latn",
+        "nld_Latn",
+        "fra_Latn",
+        "fry_Latn"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Low German",
+      "google_code": "nds",
+      "flores_code": "nds_Latn",
+      "estimated_speakers": 5000000,
+      "relevant_languages": [
+        "eng_Latn",
+        "deu_Latn",
+        "nld_Latn",
+        "fry_Latn",
+        "lim_Latn"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Frisian",
+      "google_code": "fy",
+      "flores_code": "fry_Latn",
+      "estimated_speakers": 500000,
+      "relevant_languages": [
+        "eng_Latn",
+        "nld_Latn",
+        "deu_Latn",
+        "fra_Latn",
+        "nds_Latn"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Gan Chinese",
+      "google_code": "gan",
+      "flores_code": "gan_Hani",
+      "estimated_speakers": 22000000,
+      "relevant_languages": [
+        "zho_Hans",
+        "yue_Hant",
+        "eng_Latn",
+        "wuu_Hans",
+        "hsn_Hani"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Thai",
+      "google_code": "th",
+      "flores_code": "tha_Thai",
+      "estimated_speakers": 61000000,
+      "relevant_languages": [
+        "eng_Latn",
+        "zho_Hans",
+        "lao_Laoo",
+        "khm_Khmr",
+        "mya_Mymr"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Lao",
+      "google_code": "lo",
+      "flores_code": "lao_Laoo",
+      "estimated_speakers": 7000000,
+      "relevant_languages": [
+        "eng_Latn",
+        "tha_Thai",
+        "khm_Khmr",
+        "vie_Latn",
+        "fra_Latn"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Cebuano",
+      "google_code": "ceb",
+      "flores_code": "ceb_Latn",
+      "estimated_speakers": 27000000,
+      "relevant_languages": [
+        "eng_Latn",
+        "tgl_Latn",
+        "hil_Latn",
+        "ilo_Latn",
+        "war_Latn"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Nepali",
+      "google_code": "ne",
+      "flores_code": "nep_Deva",
+      "estimated_speakers": 25000000,
+      "relevant_languages": [
+        "eng_Latn",
+        "hin_Deva",
+        "mai_Deva",
+        "bho_Deva",
+        "new_Deva"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Newari",
+      "google_code": "new",
+      "flores_code": "new_Deva",
+      "estimated_speakers": 860000,
+      "relevant_languages": [
+        "eng_Latn",
+        "hin_Deva",
+        "nep_Deva",
+        "mai_Deva",
+        "bho_Deva"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Saraiki",
+      "google_code": "skr",
+      "flores_code": "skr_Arab",
+      "estimated_speakers": 20000000,
+      "relevant_languages": [
+        "eng_Latn",
+        "urd_Arab",
+        "pan_Arab",
+        "hnd_Arab",
+        "lah_Arab"
+      ],
+      "left_to_right": false
+    },
+    {
+      "name": "Lahnda",
+      "google_code": "lah",
+      "flores_code": "lah_Arab",
+      "estimated_speakers": 9000000,
+      "relevant_languages": [
+        "urd_Arab",
+        "eng_Latn",
+        "pan_Arab",
+        "hnd_Arab",
+        "skr_Arab"
+      ],
+      "left_to_right": false
+    },
+    {
+      "name": "Jatki",
+      "google_code": "jat",
+      "flores_code": "jat_Arab",
+      "estimated_speakers": 1000000,
+      "relevant_languages": [
+        "urd_Arab",
+        "eng_Latn",
+        "pan_Arab",
+        "hnd_Arab",
+        "lah_Arab"
+      ],
+      "left_to_right": false
+    },
+    {
+      "name": "Malagasy",
+      "google_code": "mg",
+      "flores_code": "plt_Latn",
+      "estimated_speakers": 25000000,
+      "relevant_languages": [
+        "fra_Latn",
+        "eng_Latn",
+        "rcf_Latn",
+        "swh_Latn"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Rifian Berber",
+      "google_code": "rif",
+      "flores_code": "rcf_Latn",
+      "estimated_speakers": 1000000,
+      "relevant_languages": [
+        "arb_Arab",
+        "ber_Tfng",
+        "fra_Latn",
+        "spa_Latn",
+        "eng_Latn"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Sudanese Arabic",
+      "google_code": "apd",
+      "flores_code": "apd_Arab",
+      "estimated_speakers": 17000000,
+      "relevant_languages": [
+        "arb_Arab",
+        "eng_Latn",
+        "dik_Latn",
+        "nus_Latn",
+        "bej_Arab"
+      ],
+      "left_to_right": false
+    },
+    {
+      "name": "Beja",
+      "google_code": "bej",
+      "flores_code": "bej_Arab",
+      "estimated_speakers": 2000000,
+      "relevant_languages": [
+        "arb_Arab",
+        "eng_Latn",
+        "dik_Latn",
+        "nus_Latn",
+        "apd_Arab"
+      ],
+      "left_to_right": false
+    },
+    {
+      "name": "Nuer",
+      "google_code": "nus",
+      "flores_code": "nus_Latn",
+      "estimated_speakers": 1000000,
+      "relevant_languages": [
+        "eng_Latn",
+        "arb_Arab",
+        "dik_Latn",
+        "apd_Arab",
+        "bfa_Latn"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Bari",
+      "google_code": "bfa",
+      "flores_code": "bfa_Latn",
+      "estimated_speakers": 1000000,
+      "relevant_languages": [
+        "eng_Latn",
+        "arb_Arab",
+        "dik_Latn",
+        "nus_Latn",
+        "apd_Arab"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Southwestern Dinka",
+      "google_code": "din",
+      "flores_code": "dik_Latn",
+      "estimated_speakers": 1000000,
+      "relevant_languages": [
+        "eng_Latn",
+        "arb_Arab",
+        "nus_Latn",
+        "apd_Arab",
+        "bfa_Latn"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Assamese",
+      "google_code": "as",
+      "flores_code": "asm_Beng",
+      "estimated_speakers": 15000000,
+      "relevant_languages": [
+        "eng_Latn",
+        "hin_Deva",
+        "ben_Beng",
+        "mni_Meit"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Manipuri",
+      "google_code": "mni",
+      "flores_code": "mni_Meit",
+      "estimated_speakers": 1500000,
+      "relevant_languages": [
+        "eng_Latn",
+        "hin_Deva",
+        "ben_Beng",
+        "asm_Beng",
+        "rkt_Beng"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Northern Kurdish",
+      "google_code": "kmr",
+      "flores_code": "kmr_Latn",
+      "estimated_speakers": 15000000,
+      "relevant_languages": [
+        "tur_Latn",
+        "eng_Latn",
+        "arb_Arab",
+        "ckb_Arab",
+        "pes_Arab",
+        "ckb_Arab"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Central Kurdish",
+      "google_code": "ckb",
+      "flores_code": "ckb_Arab",
+      "estimated_speakers": 6000000,
+      "relevant_languages": [
+        "kmr_Latn",
+        "eng_Latn",
+        "arb_Arab",
+        "tur_Latn",
+        "pes_Arab"
+      ],
+      "left_to_right": false
+    },
+    {
+      "name": "Zulu",
+      "google_code": "zu",
+      "flores_code": "zul_Latn",
+      "estimated_speakers": 12000000,
+      "relevant_languages": [
+        "eng_Latn",
+        "xho_Latn",
+        "sot_Latn",
+        "tsn_Latn",
+        "afr_Latn"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Afrikaans",
+      "google_code": "af",
+      "flores_code": "afr_Latn",
+      "estimated_speakers": 7000000,
+      "relevant_languages": [
+        "eng_Latn",
+        "nld_Latn",
+        "zul_Latn",
+        "xho_Latn",
+        "sot_Latn"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Xhosa",
+      "google_code": "xh",
+      "flores_code": "xho_Latn",
+      "estimated_speakers": 8000000,
+      "relevant_languages": [
+        "eng_Latn",
+        "zul_Latn",
+        "sot_Latn",
+        "tsn_Latn",
+        "afr_Latn"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Bavarian",
+      "google_code": "bar",
+      "flores_code": "bar_Latn",
+      "estimated_speakers": 14000000,
+      "relevant_languages": [
+        "deu_Latn",
+        "eng_Latn",
+        "ita_Latn",
+        "gsw_Latn"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Swiss German",
+      "google_code": "gsw",
+      "flores_code": "gsw_Latn",
+      "estimated_speakers": 5000000,
+      "relevant_languages": [
+        "deu_Latn",
+        "fra_Latn",
+        "ita_Latn",
+        "eng_Latn"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Kinyarwanda",
+      "google_code": "rw",
+      "flores_code": "kin_Latn",
+      "estimated_speakers": 12000000,
+      "relevant_languages": [
+        "eng_Latn",
+        "fra_Latn",
+        "swh_Latn",
+        "run_Latn",
+        "lin_Latn"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Lingala",
+      "google_code": "ln",
+      "flores_code": "lin_Latn",
+      "estimated_speakers": 10000000,
+      "relevant_languages": [
+        "eng_Latn",
+        "fra_Latn",
+        "swh_Latn",
+        "run_Latn",
+        "kin_Latn"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Rundi",
+      "google_code": "rn",
+      "flores_code": "run_Latn",
+      "estimated_speakers": 9000000,
+      "relevant_languages": [
+        "eng_Latn",
+        "fra_Latn",
+        "swh_Latn",
+        "kin_Latn",
+        "lin_Latn"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Ilocano",
+      "google_code": "ilo",
+      "flores_code": "ilo_Latn",
+      "estimated_speakers": 10000000,
+      "relevant_languages": [
+        "eng_Latn",
+        "tgl_Latn",
+        "ceb_Latn",
+        "hil_Latn",
+        "pag_Latn"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Pangasinan",
+      "google_code": "pag",
+      "flores_code": "pag_Latn",
+      "estimated_speakers": 1500000,
+      "relevant_languages": [
+        "eng_Latn",
+        "tgl_Latn",
+        "ceb_Latn",
+        "ilo_Latn",
+        "hil_Latn"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Sylheti",
+      "google_code": "syl",
+      "flores_code": "syl_Beng",
+      "estimated_speakers": 11000000,
+      "relevant_languages": [
+        "eng_Latn",
+        "ben_Beng",
+        "asm_Beng",
+        "hnd_Arab",
+        "mni_Meit"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Rangpuri",
+      "google_code": "rkt",
+      "flores_code": "rkt_Beng",
+      "estimated_speakers": 15000000,
+      "relevant_languages": [
+        "eng_Latn",
+        "ben_Beng",
+        "asm_Beng",
+        "nep_Deva",
+        "hin_Deva"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Okinawan",
+      "google_code": "ryu",
+      "flores_code": "ryu_Jpan",
+      "estimated_speakers": 1000000,
+      "relevant_languages": [
+        "jpn_Jpan",
+        "eng_Latn",
+        "yoi_Japn",
+        "mvi_Japn"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Miyakoan",
+      "google_code": "mvi",
+      "flores_code": "mvi_Japn",
+      "estimated_speakers": 68000,
+      "relevant_languages": [
+        "jpn_Jpan",
+        "eng_Latn",
+        "ryu_Jpan",
+        "yoi_Japn"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Yonaguni",
+      "google_code": "yoi",
+      "flores_code": "yoi_Japn",
+      "estimated_speakers": 2000,
+      "relevant_languages": [
+        "jpn_Jpan",
+        "eng_Latn",
+        "ryu_Jpan",
+        "mvi_Japn"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Hijazi Arabic",
+      "google_code": "acw",
+      "flores_code": "acw_Arab",
+      "estimated_speakers": 7000000,
+      "relevant_languages": [
+        "arb_Arab",
+        "eng_Latn",
+        "arz_Arab",
+        "ary_Arab",
+        "apd_Arab"
+      ],
+      "left_to_right": false
+    },
+    {
+      "name": "Eastern Punjabi",
+      "google_code": "pa",
+      "flores_code": "pan_Guru",
+      "estimated_speakers": 33000000,
+      "relevant_languages": [
+        "eng_Latn",
+        "hin_Deva",
+        "urd_Arab",
+        "hnd_Arab",
+        "skr_Arab"
+      ],
+      "left_to_right": true
+    },
+  
+    {
+      "name": "Chittagonian",
+      "google_code": "ctg",
+      "flores_code": "ctg_Beng",
+      "estimated_speakers": 16000000,
+      "relevant_languages": [
+        "eng_Latn",
+        "ben_Beng",
+        "rkt_Beng",
+        "mni_Meit",
+        "syl_Beng"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Somali",
+      "google_code": "so",
+      "flores_code": "som_Latn",
+      "estimated_speakers": 16000000,
+      "relevant_languages": [
+        "eng_Latn",
+        "arb_Arab",
+        "amh_Ethi",
+        "orm_Latn",
+        "swh_Latn"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Madurese",
+      "google_code": "mad",
+      "flores_code": "mad_Latn",
+      "estimated_speakers": 7000000,
+      "relevant_languages": [
+        "ind_Latn",
+        "eng_Latn",
+        "jav_Latn",
+        "sun_Latn",
+        "ban_Latn"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Balinese",
+      "google_code": "ban",
+      "flores_code": "ban_Latn",
+      "estimated_speakers": 3000000,
+      "relevant_languages": [
+        "eng_Latn",
+        "ind_Latn",
+        "jav_Latn",
+        "sas_Latn",
+        "sun_Latn"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Sasak",
+      "google_code": "sas",
+      "flores_code": "sas_Latn",
+      "estimated_speakers": 2500000,
+      "relevant_languages": [
+        "eng_Latn",
+        "ind_Latn",
+        "jav_Latn",
+        "sun_Latn",
+        "mad_Latn"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Magahi",
+      "google_code": "mag",
+      "flores_code": "mag_Deva",
+      "estimated_speakers": 20000000,
+      "relevant_languages": [
+        "eng_Latn",
+        "hin_Deva",
+        "bho_Deva",
+        "mai_Deva",
+        "awa_Deva"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Haryanvi",
+      "google_code": "bgc",
+      "flores_code": "bgc_Deva",
+      "estimated_speakers": 10000000,
+      "relevant_languages": [
+        "eng_Latn",
+        "hin_Deva",
+        "pan_Guru",
+        "urd_Arab",
+        "raj_Deva"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Rajasthani",
+      "google_code": "raj",
+      "flores_code": "raj_Deva",
+      "estimated_speakers": 50000000,
+      "relevant_languages": [
+        "eng_Latn",
+        "hin_Deva",
+        "urd_Arab",
+        "pan_Guru",
+        "bgc_Deva"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Chhattisgarhi",
+      "google_code": "hne",
+      "flores_code": "hne_Deva",
+      "estimated_speakers": 16000000,
+      "relevant_languages": [
+        "eng_Latn",
+        "hin_Deva",
+        "bho_Deva",
+        "mag_Deva",
+        "awa_Deva"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Chewa",
+      "google_code": "ny",
+      "flores_code": "nya_Latn",
+      "estimated_speakers": 12000000,
+      "relevant_languages": [
+        "eng_Latn",
+        "swh_Latn",
+        "bem_Latn",
+        "tum_Latn",
+        "loz_Latn"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Lozi",
+      "google_code": "loz",
+      "flores_code": "loz_Latn",
+      "estimated_speakers": 700000,
+      "relevant_languages": [
+        "eng_Latn",
+        "nya_Latn",
+        "bem_Latn",
+        "tum_Latn",
+        "swh_Latn"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Bemba",
+      "google_code": "bem",
+      "flores_code": "bem_Latn",
+      "estimated_speakers": 3300000,
+      "relevant_languages": [
+        "eng_Latn",
+        "nya_Latn",
+        "swh_Latn",
+        "tum_Latn",
+        "loz_Latn"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Tumbuka",
+      "google_code": "tum",
+      "flores_code": "tum_Latn",
+      "estimated_speakers": 2500000,
+      "relevant_languages": [
+        "eng_Latn",
+        "nya_Latn",
+        "bem_Latn",
+        "swh_Latn",
+        "loz_Latn"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Swahili",
+      "google_code": "sw",
+      "flores_code": "swh_Latn",
+      "estimated_speakers": 16000000,
+      "relevant_languages": [
+        "eng_Latn",
+        "arb_Arab",
+        "nya_Latn",
+        "som_Latn",
+        "lin_Latn"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Deccan",
+      "google_code": "dcc",
+      "flores_code": "dcc_Arab",
+      "estimated_speakers": 13000000,
+      "relevant_languages": [
+        "eng_Latn",
+        "urd_Arab",
+        "hin_Deva",
+        "tel_Telu",
+        "mar_Deva"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Tswana",
+      "google_code": "tn",
+      "flores_code": "tsn_Latn",
+      "estimated_speakers": 8000000,
+      "relevant_languages": [
+        "eng_Latn",
+        "afr_Latn",
+        "sot_Latn",
+        "zul_Latn",
+        "xho_Latn"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Southern Sotho",
+      "google_code": "st",
+      "flores_code": "sot_Latn",
+      "estimated_speakers": 4000000,
+      "relevant_languages": [
+        "eng_Latn",
+        "zul_Latn",
+        "xho_Latn",
+        "tsn_Latn",
+        "afr_Latn"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Northern Sotho",
+      "google_code": "nso",
+      "flores_code": "nso_Latn",
+      "estimated_speakers": 4000000,
+      "relevant_languages": [
+        "eng_Latn",
+        "zul_Latn",
+        "xho_Latn",
+        "tsn_Latn",
+        "afr_Latn"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Belarusian",
+      "google_code": "be",
+      "flores_code": "bel_Cyrl",
+      "estimated_speakers": 5000000,
+      "relevant_languages": [
+        "rus_Cyrl",
+        "ukr_Cyrl",
+        "eng_Latn",
+        "pol_Latn",
+        "lit_Latn"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Lithuanian",
+      "google_code": "lt",
+      "flores_code": "lit_Latn",
+      "estimated_speakers": 3000000,
+      "relevant_languages": [
+        "eng_Latn",
+        "rus_Cyrl",
+        "pol_Latn",
+        "lvs_Latn"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Latvian",
+      "google_code": "lv",
+      "flores_code": "lvs_Latn",
+      "estimated_speakers": 1500000,
+      "relevant_languages": [
+        "eng_Latn",
+        "rus_Cyrl",
+        "lit_Latn",
+        "lvs_Latn",
+        "est_Latn"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Estonian",
+      "google_code": "et",
+      "flores_code": "est_Latn",
+      "estimated_speakers": 1100000,
+      "relevant_languages": [
+        "eng_Latn",
+        "rus_Cyrl",
+        "fin_Latn",
+        "swe_Latn",
+        "lvs_Latn"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Finnish",
+      "google_code": "fi",
+      "flores_code": "fin_Latn",
+      "estimated_speakers": 5500000,
+      "relevant_languages": [
+        "eng_Latn",
+        "swe_Latn",
+        "rus_Cyrl",
+        "est_Latn",
+        "nno_Latn",
+        "nob_Latn"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Norwegian Nynorsk",
+      "google_code": "nn",
+      "flores_code": "nno_Latn",
+      "estimated_speakers": 5000000,
+      "relevant_languages": [
+        "eng_Latn",
+        "nob_Latn",
+        "swe_Latn",
+        "dan_Latn",
+        "fin_Latn"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Danish",
+      "google_code": "da",
+      "flores_code": "dan_Latn",
+      "estimated_speakers": 6000000,
+      "relevant_languages": [
+        "eng_Latn",
+        "swe_Latn",
+        "nno_Latn",
+        "nob_Latn",
+        "fin_Latn",
+        "est_Latn"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Norwegian Bokmål",
+      "google_code": "no",
+      "flores_code": "nob_Latn",
+      "estimated_speakers": 5000000,
+      "relevant_languages": [
+        "eng_Latn",
+        "nno_Latn",
+        "swe_Latn",
+        "dan_Latn",
+        "fin_Latn"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Uyghur",
+      "google_code": "ug",
+      "flores_code": "uig_Arab",
+      "estimated_speakers": 10000000,
+      "relevant_languages": [
+        "zho_Hans",
+        "eng_Latn",
+        "kaz_Cyrl",
+        "kir_Cyrl",
+        "uzb_Latn"
+      ],
+      "left_to_right": false
+    },
+    {
+      "name": "Lombard",
+      "google_code": "lmo",
+      "flores_code": "lmo_Latn",
+      "estimated_speakers": 3500000,
+      "relevant_languages": [
+        "ita_Latn",
+        "eng_Latn",
+        "fra_Latn",
+        "deu_Latn",
+        "vec_Latn"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Venetian",
+      "google_code": "vec",
+      "flores_code": "vec_Latn",
+      "estimated_speakers": 3000000,
+      "relevant_languages": [
+        "ita_Latn",
+        "eng_Latn",
+        "fra_Latn",
+        "spa_Latn",
+        "lmo_Latn"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Oromo",
+      "google_code": "om",
+      "flores_code": "orm_Latn",
+      "estimated_speakers": 37000000,
+      "relevant_languages": [
+        "amh_Ethi",
+        "eng_Latn",
+        "som_Latn",
+        "arb_Arab",
+        "tir_Ethi"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Malay",
+      "google_code": "ms",
+      "flores_code": "zsm_Latn",
+      "estimated_speakers": 77000000,
+      "relevant_languages": [
+        "eng_Latn",
+        "ind_Latn",
+        "jav_Latn",
+        "zho_Hans",
+        "tam_Taml",
+        "tha_Thai"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Bashkir",
+      "google_code": "ba",
+      "flores_code": "bak_Cyrl",
+      "estimated_speakers": 1400000,
+      "relevant_languages": [
+        "rus_Cyrl",
+        "eng_Latn",
+        "tat_Cyrl",
+        "chv_Cyrl",
+        "kaz_Cyrl"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Tatar",
+      "google_code": "tt",
+      "flores_code": "tat_Cyrl",
+      "estimated_speakers": 5000000,
+      "relevant_languages": [
+        "rus_Cyrl",
+        "eng_Latn",
+        "bak_Cyrl",
+        "chv_Cyrl",
+        "kaz_Cyrl"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Chuvash",
+      "google_code": "cv",
+      "flores_code": "chv_Cyrl",
+      "estimated_speakers": 1900000,
+      "relevant_languages": [
+        "rus_Cyrl",
+        "eng_Latn",
+        "tat_Cyrl",
+        "bak_Cyrl",
+        "kaz_Cyrl"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Awadhi",
+      "google_code": "awa",
+      "flores_code": "awa_Deva",
+      "estimated_speakers": 38000000,
+      "relevant_languages": [
+        "eng_Latn",
+        "hin_Deva",
+        "bho_Deva",
+        "hne_Deva",
+        "mag_Deva"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "North Azerbaijani",
+      "google_code": "az",
+      "flores_code": "azj_Latn",
+      "estimated_speakers": 23000000,
+      "relevant_languages": [
+        "tur_Latn",
+        "eng_Latn",
+        "rus_Cyrl",
+        "pes_Arab",
+        "kaz_Cyrl"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "South Azerbaijani",
+      "google_code": "azb",
+      "flores_code": "azb_Latn",
+      "estimated_speakers": 8000000,
+      "relevant_languages": [
+        "tur_Latn",
+        "eng_Latn",
+        "rus_Cyrl",
+        "pes_Arab",
+        "kaz_Cyrl"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Yiddish",
+      "google_code": "yi",
+      "flores_code": "ydd_Hebr",
+      "estimated_speakers": 1500000,
+      "relevant_languages": [
+        "eng_Latn",
+        "deu_Latn",
+        "heb_Hebr",
+        "pol_Latn",
+        "rus_Cyrl"
+      ],
+      "left_to_right": false
+    },
+    {
+      "name": "Haitian Creole",
+      "google_code": "ht",
+      "flores_code": "hat_Latn",
+      "estimated_speakers": 12000000,
+      "relevant_languages": [
+        "fra_Latn",
+        "eng_Latn",
+        "spa_Latn",
+        "lou_Latn",
+        "jam_Latn"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Louisiana Creole French",
+      "google_code": "lou",
+      "flores_code": "lou_Latn",
+      "estimated_speakers": 100000,
+      "relevant_languages": [
+        "fra_Latn",
+        "eng_Latn",
+        "spa_Latn",
+        "hat_Latn",
+        "jam_Latn"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Jamaican Patois",
+      "google_code": "jam",
+      "flores_code": "jam_Latn",
+      "estimated_speakers": 3000000,
+      "relevant_languages": [
+        "eng_Latn",
+        "spa_Latn",
+        "fra_Latn",
+        "hat_Latn",
+        "lou_Latn"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Fula",
+      "google_code": "ff",
+      "flores_code": "ful_Latn",
+      "estimated_speakers": 24000000,
+      "relevant_languages": [
+        "eng_Latn",
+        "fra_Latn",
+        "arb_Arab",
+        "hau_Latn",
+        "wol_Latn"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Wolof",
+      "google_code": "wo",
+      "flores_code": "wol_Latn",
+      "estimated_speakers": 5000000,
+      "relevant_languages": [
+        "fra_Latn",
+        "eng_Latn",
+        "wol_Latn",
+        "sna_Latn",
+        "por_Latn"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Napoletano-Calabrese",
+      "google_code": "nap",
+      "flores_code": "nap_Latn",
+      "estimated_speakers": 5700000,
+      "relevant_languages": [
+        "ita_Latn",
+        "eng_Latn",
+        "scn_Latn",
+        "srd_Latn",
+        "lmo_Latn"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Sardinian",
+      "google_code": "sc",
+      "flores_code": "srd_Latn",
+      "estimated_speakers": 1000000,
+      "relevant_languages": [
+        "ita_Latn",
+        "eng_Latn",
+        "nap_Latn",
+        "scn_Latn",
+        "lmo_Latn"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Sicilian",
+      "google_code": "scn",
+      "flores_code": "scn_Latn",
+      "estimated_speakers": 5000000,
+      "relevant_languages": [
+        "ita_Latn",
+        "eng_Latn",
+        "nap_Latn",
+        "srd_Latn",
+        "lmo_Latn"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Northern Min",
+      "google_code": "cdo",
+      "flores_code": "cdo_Hani",
+      "estimated_speakers": 10000000,
+      "relevant_languages": [
+        "zho_Hans",
+        "yue_Hant",
+        "eng_Latn",
+        "nan_Hani",
+        "wuu_Hans"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Kazakh",
+      "google_code": "kk",
+      "flores_code": "kaz_Cyrl",
+      "estimated_speakers": 12000000,
+      "relevant_languages": [
+        "rus_Cyrl",
+        "eng_Latn",
+        "uzb_Latn",
+        "kir_Cyrl",
+        "tat_Cyrl"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Mingrelian",
+      "google_code": "xmf",
+      "flores_code": "xmf_Geor",
+      "estimated_speakers": 344000,
+      "relevant_languages": [
+        "kat_Geor",
+        "eng_Latn",
+        "rus_Cyrl",
+        "lzz_Latn",
+        "sva_Geor"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Svan",
+      "google_code": "sv",
+      "flores_code": "sva_Geor",
+      "estimated_speakers": 30,
+      "relevant_languages": [
+        "kat_Geor",
+        "eng_Latn",
+        "rus_Cyrl",
+        "lzz_Latn",
+        "xmf_Geor"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Laz",
+      "google_code": "lzz",
+      "flores_code": "lzz_Latn",
+      "estimated_speakers": 220000,
+      "relevant_languages": [
+        "kat_Geor",
+        "eng_Latn",
+        "tur_Latn",
+        "azj_Latn",
+        "azb_Latn",
+        "hye_Armn"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Armenian",
+      "google_code": "hy",
+      "flores_code": "hye_Armn",
+      "estimated_speakers": 3000000,
+      "relevant_languages": [
+        "eng_Latn",
+        "rus_Cyrl",
+        "tur_Latn",
+        "kat_Geor",
+        "azb_Latn",
+        "azj_Latn"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Georgian",
+      "google_code": "ka",
+      "flores_code": "kat_Geor",
+      "estimated_speakers": 3500000,
+      "relevant_languages": [
+        "rus_Cyrl",
+        "eng_Latn",
+        "tur_Latn",
+        "azj_Latn",
+        "azb_Latn",
+        "hye_Armn"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Santali",
+      "google_code": "sat",
+      "flores_code": "sat_Olck",
+      "estimated_speakers": 7200000,
+      "relevant_languages": [
+        "eng_Latn",
+        "hin_Deva",
+        "ben_Beng",
+        "ory_Orya",
+        "mun_Mund"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Mundari",
+      "google_code": "mun",
+      "flores_code": "mun_Mund",
+      "estimated_speakers": 1000000,
+      "relevant_languages": [
+        "eng_Latn",
+        "hin_Deva",
+        "ben_Beng",
+        "sat_Olck",
+        "ory_Orya"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Bagheli",
+      "google_code": "bfy",
+      "flores_code": "bfy_Deva",
+      "estimated_speakers": 3100000,
+      "relevant_languages": [
+        "eng_Latn",
+        "hin_Deva",
+        "bho_Deva",
+        "awa_Deva",
+        "hne_Deva"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Khmer",
+      "google_code": "km",
+      "flores_code": "khm_Khmr",
+      "estimated_speakers": 16000000,
+      "relevant_languages": [
+        "eng_Latn",
+        "vie_Latn",
+        "tha_Thai",
+        "lao_Laoo",
+        "fra_Latn"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Shona",
+      "google_code": "sn",
+      "flores_code": "sna_Latn",
+      "estimated_speakers": 10700000,
+      "relevant_languages": [
+        "eng_Latn",
+        "zul_Latn",
+        "nya_Latn",
+        "nde_Latn",
+        "tsn_Latn"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Northern Ndebele",
+      "google_code": "nd",
+      "flores_code": "nde_Latn",
+      "estimated_speakers": 2000000,
+      "relevant_languages": [
+        "eng_Latn",
+        "zul_Latn",
+        "nya_Latn",
+        "nde_Latn",
+        "tsn_Latn"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Southern Ndebele",
+      "google_code": "nr",
+      "flores_code": "nbl_Latn",
+      "estimated_speakers": 1000000,
+      "relevant_languages": [
+        "eng_Latn",
+        "zul_Latn",
+        "nya_Latn",
+        "nde_Latn",
+        "tsn_Latn"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Hiligaynon",
+      "google_code": "hil",
+      "flores_code": "hil_Latn",
+      "estimated_speakers": 9300000,
+      "relevant_languages": [
+        "eng_Latn",
+        "tgl_Latn",
+        "ceb_Latn",
+        "ilo_Latn",
+        "war_Latn"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Waray",
+      "google_code": "war",
+      "flores_code": "war_Latn",
+      "estimated_speakers": 3000000,
+      "relevant_languages": [
+        "eng_Latn",
+        "ceb_Latn",
+        "hil_Latn",
+        "ilo_Latn",
+        "tgl_Latn"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Sahidic Coptic",
+      "google_code": "sah",
+      "flores_code": "sah_Cop",
+      "estimated_speakers": 300,
+      "relevant_languages": [
+        "eng_Latn",
+        "arz_Arab",
+        "boh_Copt",
+        "ary_Arab",
+        "arb_Arab"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Bohairic Coptic",
+      "google_code": "boh",
+      "flores_code": "boh_Copt",
+      "estimated_speakers": 300,
+      "relevant_languages": [
+        "eng_Latn",
+        "arz_Arab",
+        "sah_Cop",
+        "ary_Arab",
+        "arb_Arab"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Sanskrit",
+      "google_code": "sa",
+      "flores_code": "san_Deva",
+      "estimated_speakers": 25000,
+      "relevant_languages": [
+        "hin_Deva",
+        "ben_Beng",
+        "mar_Deva",
+        "tel_Telu",
+        "tam_Taml",
+        "kan_Knda",
+        "mal_Mlym",
+        "eng_Latn"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Latin",
+      "google_code": "la",
+      "flores_code": "lat_Latn",
+      "estimated_speakers": 20000,
+      "relevant_languages": [
+        "eng_Latn",
+        "ita_Latn",
+        "spa_Latn",
+        "fra_Latn",
+        "por_Latn",
+        "deu_Latn",
+        "ron_Latn"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Classical Chinese",
+      "google_code": "lzh",
+      "flores_code": "lzh_Hani",
+      "estimated_speakers": 10000,
+      "relevant_languages": [
+        "zho_Hans",
+        "zho_Hant",
+        "jpn_Jpan",
+        "kor_Hang",
+        "vie_Latn"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Greek",
+      "google_code": "el",
+      "flores_code": "ell_Grek",
+      "estimated_speakers": 13000000,
+      "relevant_languages": [
+        "eng_Latn",
+        "grc_Grek",
+        "tur_Latn",
+        "fra_Latn",
+        "deu_Latn"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Ancient Greek",
+      "google_code": "grc",
+      "flores_code": "grc_Grek",
+      "estimated_speakers": 5000,
+      "relevant_languages": [
+        "ell_Grek",
+        "eng_Latn",
+        "lat_Latn",
+        "fra_Latn",
+        "deu_Latn",
+        "ita_Latn"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Esperanto",
+      "google_code": "eo",
+      "flores_code": "epo_Latn",
+      "estimated_speakers": 2000000,
+      "relevant_languages": [
+        "eng_Latn",
+        "fra_Latn",
+        "deu_Latn",
+        "spa_Latn",
+        "ita_Latn",
+        "rus_Cyrl"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Klingon",
+      "google_code": "tlh",
+      "flores_code": "tlh_Latn",
+      "estimated_speakers": 20000,
+      "relevant_languages": [
+        "eng_Latn",
+        "deu_Latn",
+        "spa_Latn",
+        "fra_Latn",
+        "jpn_Jpan"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Navajo",
+      "google_code": "nv",
+      "flores_code": "nav_Latn",
+      "estimated_speakers": 170000,
+      "relevant_languages": [
+        "eng_Latn",
+        "spa_Latn",
+        "apa_Latn",
+        "hop_Latn",
+        "zun_Latn"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Zuni",
+      "google_code": "zun",
+      "flores_code": "zun_Latn",
+      "estimated_speakers": 9000,
+      "relevant_languages": [
+        "eng_Latn",
+        "spa_Latn",
+        "nav_Latn",
+        "apa_Latn",
+        "hop_Latn"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Apache",
+      "google_code": "ap",
+      "flores_code": "apa_Latn",
+      "estimated_speakers": 100000,
+      "relevant_languages": [
+        "eng_Latn",
+        "spa_Latn",
+        "nav_Latn",
+        "zun_Latn",
+        "hop_Latn"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Hopi",
+      "google_code": "hop",
+      "flores_code": "hop_Latn",
+      "estimated_speakers": 6000,
+      "relevant_languages": [
+        "eng_Latn",
+        "spa_Latn",
+        "nav_Latn",
+        "apa_Latn",
+        "zun_Latn"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Cherokee",
+      "google_code": "chr",
+      "flores_code": "chr_Cher",
+      "estimated_speakers": 2100,
+      "relevant_languages": [
+        "eng_Latn",
+        "spa_Latn",
+        "mus_Latn"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Muscogee",
+      "google_code": "mus",
+      "flores_code": "mus_Latn",
+      "estimated_speakers": 4500,
+      "relevant_languages": [
+        "eng_Latn",
+        "chr_Cher",
+        "spa_Latn"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Old English",
+      "google_code": "ang",
+      "flores_code": "ang_Latn",
+      "estimated_speakers": 0,
+      "relevant_languages": [
+        "eng_Latn",
+        "enm_Latn",
+        "fry_Latn",
+        "deu_Latn",
+        "non_Latn"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Middle English",
+      "google_code": "enm",
+      "flores_code": "enm_Latn",
+      "estimated_speakers": 0,
+      "relevant_languages": [
+        "eng_Latn",
+        "ang_Latn",
+        "fry_Latn",
+        "fra_Latn",
+        "lat_Latn"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Old Norse",
+      "google_code": "non",
+      "flores_code": "non_Latn",
+      "estimated_speakers": 0,
+      "relevant_languages": [
+        "isl_Latn",
+        "fao_Latn",
+        "dan_Latn",
+        "nob_Latn",
+        "swe_Latn",
+        "eng_Latn"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Faroese",
+      "google_code": "fo",
+      "flores_code": "fao_Latn",
+      "estimated_speakers": 80000,
+      "relevant_languages": [
+        "eng_Latn",
+        "dan_Latn",
+        "non_Latn",
+        "isl_Latn",
+        "nob_Latn",
+        "nno_Latn"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Icelandic",
+      "google_code": "is",
+      "flores_code": "isl_Latn",
+      "estimated_speakers": 350000,
+      "relevant_languages": [
+        "eng_Latn",
+        "non_Latn",
+        "dan_Latn",
+        "nob_Latn",
+        "nno_Latn",
+        "swe_Latn"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Swedish",
+      "google_code": "sv",
+      "flores_code": "swe_Latn",
+      "estimated_speakers": 9500000,
+      "relevant_languages": [
+        "eng_Latn",
+        "dan_Latn",
+        "nob_Latn",
+        "nno_Latn",
+        "fin_Latn",
+        "est_Latn"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Slovak",
+      "google_code": "sk",
+      "flores_code": "slk_Latn",
+      "estimated_speakers": 5000000,
+      "relevant_languages": [
+        "eng_Latn",
+        "ces_Latn",
+        "pol_Latn",
+        "hun_Latn",
+        "rus_Cyrl"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Czech",
+      "google_code": "cs",
+      "flores_code": "ces_Latn",
+      "estimated_speakers": 10000000,
+      "relevant_languages": [
+        "eng_Latn",
+        "pol_Latn",
+        "slk_Latn",
+        "hun_Latn",
+        "rus_Cyrl"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Akkadian",
+      "google_code": "akk",
+      "flores_code": "akk_Xsux",
+      "estimated_speakers": 0,
+      "relevant_languages": [
+        "arb_Arab",
+        "heb_Hebr",
+        "arc_Hebr",
+        "syc_Syrc"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Syriac",
+      "google_code": "syc",
+      "flores_code": "syc_Syrc",
+      "estimated_speakers": 0,
+      "relevant_languages": [
+        "akk_Xsux",
+        "arb_Arab",
+        "heb_Hebr",
+        "arc_Hebr"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Aramaic",
+      "google_code": "arc",
+      "flores_code": "arc_Hebr",
+      "estimated_speakers": 0,
+      "relevant_languages": [
+        "akk_Xsux",
+        "arb_Arab",
+        "heb_Hebr",
+        "syc_Syrc"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Sumerian",
+      "google_code": "sux",
+      "flores_code": "sux_Xsux",
+      "estimated_speakers": 0,
+      "relevant_languages": [
+        "akk_Xsux",
+        "arb_Arab",
+        "heb_Hebr"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Etruscan",
+      "google_code": "ett",
+      "flores_code": "ett_Ital",
+      "estimated_speakers": 0,
+      "relevant_languages": [
+        "lat_Latn",
+        "ita_Latn",
+        "grc_Grek"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Linear B",
+      "google_code": "gmy",
+      "flores_code": "gmy_Linb",
+      "estimated_speakers": 0,
+      "relevant_languages": [
+        "grc_Grek",
+        "eng_Latn",
+        "lat_Latn"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Tocharian B",
+      "google_code": "txb",
+      "flores_code": "txb_Brah",
+      "estimated_speakers": 0,
+      "relevant_languages": [
+        "san_Deva",
+        "pli_Deva",
+        "eng_Latn",
+        "zho_Hans"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Pali",
+      "google_code": "pi",
+      "flores_code": "pli_Deva",
+      "estimated_speakers": 0,
+      "relevant_languages": [
+        "san_Deva",
+        "eng_Latn",
+        "zho_Hans"
+      ],
+      "left_to_right": true
     }
-]
+  ]
