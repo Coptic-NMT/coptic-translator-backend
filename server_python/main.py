@@ -166,7 +166,8 @@ def get_coptic_translation(text, src, tgt):
 def translate():
     req = request.get_json()
     src, tgt, text = req["src"], req["tgt"], req["text"]
-
+    # Cut down length of text to 500 characters
+    text = text[:500]
     try:
         translation, status = translate_universal(text, src, tgt)
     except ValueError as e:
