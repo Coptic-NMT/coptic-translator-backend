@@ -1,4 +1,3 @@
-
 import http
 import os
 import time
@@ -9,6 +8,8 @@ import requests
 from http import HTTPStatus
 from util import degreekify, greekify
 import universal_translator.llm_translate
+from flask_limiter import Limiter
+from flask_limiter.util import get_remote_address
 
 load_dotenv()
 
@@ -48,6 +49,12 @@ GENERATION_CONFIG = {
 }
 
 HEADERS = {"Content-Type": "application/json", "Authorization": "Bearer " + API_TOKEN}
+
+limiter = Limiter(
+    app=app,
+    key_func=get_remote_address,  # Uses IP address to track requests
+    default_limits=["200 per day", "50 per hour"]  # Default limits
+)
 
 
 def gtranslate(text, src, tgt):
@@ -155,6 +162,7 @@ def get_coptic_translation(text, src, tgt):
 
 
 @app.route("/translate", methods=["POST"])
+@limiter.limit("100 per minute")
 def translate():
     req = request.get_json()
     src, tgt, text = req["src"], req["tgt"], req["text"]
