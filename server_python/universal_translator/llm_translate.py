@@ -19,9 +19,9 @@ def get_language(code: str):
     return language
 
 
-USER_PROMPT = """Translate the following from {src_name} to {tgt_name}. Do not provide any output text besides for the translation. Wrap your output in <translation></translation> tags.
+USER_PROMPT = """Translate the following from {src_name} to {tgt_name}. If the input is not correctly in the {src_name} language, just output a message saying "Error: wrong language". Do not provide any output text besides for the translation. Wrap your output in <translation></translation> tags.
 
-English: {text}"""
+{src_name}: {text}"""
 
 ASSISTANT_PROMPT = "{tgt_name}: <translation>"
 
