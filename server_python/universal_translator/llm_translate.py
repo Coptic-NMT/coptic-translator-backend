@@ -122,7 +122,8 @@ def translate_claude(src: dict, tgt: dict, text: str, model: Model):
                 ]
             }
         ],
-        stop_sequences=["</translation>"]
+        stop_sequences=["</translation>"],
+        timeout=5
     )
 
     # Extract the translation from the response
@@ -148,12 +149,12 @@ def translate_openai(src: dict, tgt: dict, text: str, model: Model):
         messages=[
             {"role": "user", "content": user_prompt},
         ],
-        response_format=Translation
+        response_format=Translation,
+        timeout=5
     )
 
     # Extract the translation from the response
-    translation_dict = json.loads(response.choices[0].message.content.strip())
-    translation = Translation(**translation_dict)
+    translation = response.parsed
     input_cost = response.usage.prompt_tokens * model.input_cost_per_token
     output_cost = response.usage.completion_tokens * model.output_cost_per_token
     return TranslationResponse(translation=translation, input_cost=input_cost, output_cost=output_cost)
