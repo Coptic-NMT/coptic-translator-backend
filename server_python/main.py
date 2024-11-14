@@ -61,7 +61,7 @@ def gtranslate(text, src, tgt):
     return translator.translate(text, src=src, dest=tgt).text
 
 
-def translate_universal(text: str, src: str, tgt: str):
+def translate_universal(text: str, src: str, tgt: str, model_name: str):
     if src in COPTIC_LANGUAGES:
         pivot_lang = ENGLISH
         translation, status = get_coptic_translation(text, src, pivot_lang)
@@ -72,7 +72,7 @@ def translate_universal(text: str, src: str, tgt: str):
         if tgt == pivot_lang:
             return translation, 200
         
-        return translate_universal(translation, pivot_lang, tgt)
+        return translate_universal(translation, pivot_lang, tgt, model_name)
         
     if tgt in COPTIC_LANGUAGES:
         pivot_lang = ENGLISH
@@ -83,7 +83,7 @@ def translate_universal(text: str, src: str, tgt: str):
         if status != 200:
             return pivot_translation, status
         
-        return translate_universal(pivot_translation, pivot_lang, tgt)
+        return translate_universal(pivot_translation, pivot_lang, tgt, model_name)
 
     # Use googletrans, when possible
     if src in googletrans_languages and tgt in googletrans_languages:
@@ -91,8 +91,12 @@ def translate_universal(text: str, src: str, tgt: str):
         return translation, 200
     
     # Otherwise, just use our universal translator
-    translation = universal_translator.llm_translate.translate_universal(src, tgt, text)
-    return translation, 200
+    translation_response = universal_translator.llm_translate.translate_universal(src, tgt, text, model_name)
+    # TODO: record the costs
+    print(f"Input cost: {translation_response.input_cost:.6f}")
+    print(f"Output cost: {translation_response.output_cost:.6f}")
+    print(f"Total cost: {translation_response.input_cost + translation_response.output_cost:.6f}")
+    return translation_response.translation.text, 200
 
 
 # Only when one of src or tgt is coptic
@@ -166,22 +170,23 @@ def get_coptic_translation(text, src, tgt):
 def translate():
     req = request.get_json()
     src, tgt, text = req["src"], req["tgt"], req["text"]
+    model_name = req.get("model", "claude-3-5-sonnet-20241022")
     # Cut down length of text to 500 characters
     text = text[:500]
     try:
-        translation, status = translate_universal(text, src, tgt)
+        translation, status = translate_universal(text, src, tgt, model_name)
     except ValueError as e:
-        translation, status = "", 400
+        translation, status = f"{e.__class__.__name__}: {str(e)}", 400
     except Exception as e:
-        translation, status = "", 500
+        translation, status = f"{e.__class__.__name__}: {str(e)}", 500
 
     match status:
         case HTTPStatus.INTERNAL_SERVER_ERROR:
-            return jsonify({"code": status, "message": "InternalServerError"}), 500
+            return jsonify({"code": status, "message": "InternalServerError: " + translation}), 500
         case HTTPStatus.UNPROCESSABLE_ENTITY:
-            return jsonify({"code": status, "message": "InputTooLong"}), 422
+            return jsonify({"code": status, "message": "InputTooLong: " + translation}), 422
         case HTTPStatus.BAD_REQUEST:
-            return jsonify({"code": status, "message": f"Invalid source or target language"})
+            return jsonify({"code": status, "message": "BadRequest: " + translation})
         case HTTPStatus.OK:
             return jsonify({"code": status, "translation": translation})
         case _:
