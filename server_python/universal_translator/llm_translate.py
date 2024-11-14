@@ -154,7 +154,7 @@ def translate_openai(src: dict, tgt: dict, text: str, model: Model):
     )
 
     # Extract the translation from the response
-    translation = response.parsed
+    translation = response.choices[0].message.parsed
     input_cost = response.usage.prompt_tokens * model.input_cost_per_token
     output_cost = response.usage.completion_tokens * model.output_cost_per_token
     return TranslationResponse(translation=translation, input_cost=input_cost, output_cost=output_cost)
@@ -180,7 +180,7 @@ def translate_universal(src_code, tgt_code, text, model_name = "claude-3-5-sonne
         if fallbacks:
             # remove the provider from the list
             fallbacks = [fallback for fallback in fallbacks if fallback.type != model.type]
-            print(f"Warning: {e}. Falling back to {fallbacks}")
+            print(f"WARNING: {e}. Falling back to {fallbacks}")
             model_name = fallbacks[0].name
             return translate_universal(src_code, tgt_code, text, model_name, fallbacks=fallbacks[1:])
 

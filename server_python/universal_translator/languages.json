@@ -2761,5 +2761,42 @@
         "zho_Hans"
       ],
       "left_to_right": true
-    }
+    },
+    {
+        "name": "Singlish",
+        "google_code": "zh-SG",
+        "flores_code": "sng_Latn",
+        "estimated_speakers": 3500000,
+        "relevant_languages": [
+          "eng_Latn",
+          "zho_Hans",
+          "zsm_Latn",
+          "tam_Taml",
+          "ben_Beng"
+        ],
+        "left_to_right": true
+      },
+      {
+        "name": "Romansh",
+        "google_code": "rm",
+        "flores_code": "roh_Latn",
+        "estimated_speakers": 35000,
+        "relevant_languages": [
+          "eng_Latn",
+          "ita_Latn",
+          "deu_Latn",
+          "fra_Latn"
+        ],
+        "left_to_right": true
+      },
+      {
+        "name": "Brainrot",
+        "google_code": "br",
+        "flores_code": "brn_Latn",
+        "estimated_speakers": 0,
+        "relevant_languages": [
+          "eng_Latn"
+        ],
+        "left_to_right": true
+      }
   ]
