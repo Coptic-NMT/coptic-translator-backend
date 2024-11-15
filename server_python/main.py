@@ -61,7 +61,7 @@ def gtranslate(text, src, tgt):
     return translator.translate(text, src=src, dest=tgt).text
 
 
-def translate_universal(text: str, src: str, tgt: str, model_name: str):
+def translate_universal(text: str, src: str, tgt: str, model_name: str) -> tuple[str, HTTPStatus]:
     if src in COPTIC_LANGUAGES:
         pivot_lang = ENGLISH
         translation, status = get_coptic_translation(text, src, pivot_lang)
@@ -70,7 +70,7 @@ def translate_universal(text: str, src: str, tgt: str, model_name: str):
             return translation, status
         
         if tgt == pivot_lang:
-            return translation, 200
+            return translation, HTTPStatus.OK
         
         return translate_universal(translation, pivot_lang, tgt, model_name)
         
@@ -80,7 +80,7 @@ def translate_universal(text: str, src: str, tgt: str, model_name: str):
             return get_coptic_translation(text, src, tgt)
         
         pivot_translation, status = translate_universal(text, src, pivot_lang)
-        if status != 200:
+        if status != HTTPStatus.OK:
             return pivot_translation, status
         
         return translate_universal(pivot_translation, pivot_lang, tgt, model_name)
@@ -88,7 +88,7 @@ def translate_universal(text: str, src: str, tgt: str, model_name: str):
     # Use googletrans, when possible
     if src in googletrans_languages and tgt in googletrans_languages:
         translation = gtranslate(text, src, tgt)
-        return translation, 200
+        return translation, HTTPStatus.OK
     
     # Otherwise, just use our universal translator
     translation_response = universal_translator.llm_translate.translate_universal(src, tgt, text, model_name)
@@ -96,7 +96,7 @@ def translate_universal(text: str, src: str, tgt: str, model_name: str):
     print(f"Input cost: {translation_response.input_cost:.6f}")
     print(f"Output cost: {translation_response.output_cost:.6f}")
     print(f"Total cost: {translation_response.input_cost + translation_response.output_cost:.6f}")
-    return translation_response.translation.text, 200
+    return translation_response.translation.text, HTTPStatus.OK
 
 
 # Only when one of src or tgt is coptic
@@ -119,7 +119,7 @@ def postprocess(tgt, text):
     return text
 
 
-def get_coptic_translation(text, src, tgt):
+def get_coptic_translation(text, src, tgt) -> tuple[str | None, HTTPStatus]:
     if (src in COPTIC_LANGUAGES and tgt != ENGLISH) or (tgt in COPTIC_LANGUAGES and src != ENGLISH):
         raise ValueError(f"Cannot run coptic translation from {src} to {tgt}")
     if src not in COPTIC_LANGUAGES and tgt not in COPTIC_LANGUAGES:
@@ -143,6 +143,7 @@ def get_coptic_translation(text, src, tgt):
 
     translation = None
     status = None
+    error = None
     for _ in range(MAX_RETRIES):
         try:
             response = requests.post(api, json=instance, headers=HEADERS)
@@ -153,14 +154,15 @@ def get_coptic_translation(text, src, tgt):
                     break
             response.raise_for_status()
             translation = result[0]["generated_text"]
-            status = 200
+            status = HTTPStatus.OK
             break
         except Exception as e:
             time.sleep(5)
-            status = HTTPStatus.INTERNAL_SERVER_ERROR
-            print(f"Error: {e}")
+            error = e
             continue
-
+    
+    if error:
+        raise error
     translation = postprocess(tgt, translation)
     return translation, status
 
@@ -176,17 +178,17 @@ def translate():
     try:
         translation, status = translate_universal(text, src, tgt, model_name)
     except ValueError as e:
-        translation, status = f"{e.__class__.__name__}: {str(e)}", 400
+        translation, status = f"{e.__class__.__name__}: {str(e)}", HTTPStatus.BAD_REQUEST
     except Exception as e:
-        translation, status = f"{e.__class__.__name__}: {str(e)}", 500
+        translation, status = f"{e.__class__.__name__}: {str(e)}", HTTPStatus.INTERNAL_SERVER_ERROR
 
     match status:
         case HTTPStatus.INTERNAL_SERVER_ERROR:
-            return jsonify({"code": status, "message": "InternalServerError: " + translation}), 500
+            return jsonify({"code": status, "message": f"InternalServerError: {translation}"}), 500
         case HTTPStatus.UNPROCESSABLE_ENTITY:
-            return jsonify({"code": status, "message": "InputTooLong: " + translation}), 422
+            return jsonify({"code": status, "message": f"InputTooLong: {translation}"}), 422
         case HTTPStatus.BAD_REQUEST:
-            return jsonify({"code": status, "message": "BadRequest: " + translation})
+            return jsonify({"code": status, "message": f"BadRequest: {translation}"})
         case HTTPStatus.OK:
             return jsonify({"code": status, "translation": translation})
         case _:
