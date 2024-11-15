@@ -173,6 +173,8 @@ def translate():
     req = request.get_json()
     src, tgt, text = req["src"], req["tgt"], req["text"]
     model_name = req.get("model", "claude-3-5-sonnet-20241022")
+    print(f"Translating from {src} to {tgt} with model {model_name}")
+    print(f"Text: {text}")
     # Cut down length of text to 500 characters
     text = text[:500]
     try:
