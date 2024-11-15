@@ -370,7 +370,26 @@
       "relevant_languages": [
         "arb_Arab",
         "eng_Latn",
-        "fra_Latn"
+        "fra_Latn",
+        "deu_Latn",
+        "ars_Arab"
+      ],
+      "left_to_right": false
+    },
+    {
+      "name": "Saudi Arabic",
+      "google_code": "ar-SA",
+      "flores_code": "ars_Arab",
+      "estimated_speakers": 31000000,
+      "relevant_languages": [
+        "eng_Latn",
+        "fra_Latn",
+        "deu_Latn",
+        "ary_Arab",
+        "pes_Arab",
+        "acw_Arab",
+        "heb_Hebr",
+        "tur_Latn"
       ],
       "left_to_right": false
     },
@@ -2848,6 +2867,18 @@
           "gla_Latn",
           "cor_Latn",
           "glg_Latn"
+        ],
+        "left_to_right": true
+      },
+      {
+        "name": "Tokipona",
+        "google_code": "tok",
+        "flores_code": "tok_Latn",
+        "estimated_speakers": 1000,
+        "relevant_languages": [
+          "eng_Latn",
+          "deu_Latn",
+          "fra_Latn"
         ],
         "left_to_right": true
       }
