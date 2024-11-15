@@ -2810,5 +2810,45 @@
           "fra_Latn"
         ],
         "left_to_right": true
+      },
+      {
+        "name": "Breton",
+        "google_code": "br",
+        "flores_code": "bre_Latn",
+        "estimated_speakers": 200000,
+        "relevant_languages": [
+          "fra_Latn",
+          "eng_Latn",
+          "glg_Latn"
+        ],
+        "left_to_right": true
+      },
+      {
+        "name": "Scottish Gaelic",
+        "google_code": "gd",
+        "flores_code": "gla_Latn",
+        "estimated_speakers": 58000,
+        "relevant_languages": [
+          "eng_Latn",
+          "bre_Latn",
+          "cor_Latn",
+          "cym_Latn",
+          "glg_Latn"
+        ],
+        "left_to_right": true
+      },
+      {
+        "name": "Welsh",
+        "google_code": "cy",
+        "flores_code": "cym_Latn",
+        "estimated_speakers": 700000,
+        "relevant_languages": [
+          "eng_Latn",
+          "bre_Latn",
+          "gla_Latn",
+          "cor_Latn",
+          "glg_Latn"
+        ],
+        "left_to_right": true
       }
-  ]
+    ]
