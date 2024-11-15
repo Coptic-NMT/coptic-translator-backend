@@ -2798,5 +2798,17 @@
           "eng_Latn"
         ],
         "left_to_right": true
+      },
+      {
+        "name": "Cornish",
+        "google_code": "kw",
+        "flores_code": "cor_Latn",
+        "estimated_speakers": 1000,
+        "relevant_languages": [
+          "eng_Latn",
+          "bre_Latn",
+          "fra_Latn"
+        ],
+        "left_to_right": true
       }
   ]
