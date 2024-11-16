@@ -163,7 +163,7 @@ def get_coptic_translation(text, src, tgt) -> tuple[str | None, HTTPStatus]:
             error = e
             continue
     
-    if error:
+    if error and status is None:
         raise error
     translation = postprocess(tgt, translation)
     return translation, status
@@ -188,15 +188,15 @@ def translate():
 
     match status:
         case HTTPStatus.INTERNAL_SERVER_ERROR:
-            return jsonify({"code": status, "message": f"InternalServerError: {translation}"}), 500
+            return jsonify({"code": status, "message": f"InternalServerError: {translation}"}), HTTPStatus.INTERNAL_SERVER_ERROR
         case HTTPStatus.UNPROCESSABLE_ENTITY:
-            return jsonify({"code": status, "message": f"InputTooLong: {translation}"}), 422
+            return jsonify({"code": status, "message": f"InputTooLong: {translation}"}), HTTPStatus.UNPROCESSABLE_ENTITY
         case HTTPStatus.BAD_REQUEST:
-            return jsonify({"code": status, "message": f"BadRequest: {translation}"})
+            return jsonify({"code": status, "message": f"BadRequest: {translation}"}), HTTPStatus.BAD_REQUEST
         case HTTPStatus.OK:
-            return jsonify({"code": status, "translation": translation})
+            return jsonify({"code": status, "translation": translation}), HTTPStatus.OK
         case _:
-            return jsonify({"code": 500, "message": f"Unknown status code {status}"})
+            return jsonify({"code": 500, "message": f"Unknown status code {status}"}), HTTPStatus.INTERNAL_SERVER_ERROR
 
     
 
