@@ -370,11 +370,25 @@
       "relevant_languages": [
         "arb_Arab",
         "eng_Latn",
+        "nub_Latn",
         "fra_Latn",
         "deu_Latn",
         "ars_Arab"
       ],
       "left_to_right": false
+    },
+    {
+      "name": "Nubian",
+      "google_code": "nub",
+      "flores_code": "nub_Latn",
+      "estimated_speakers": 1000000,
+      "relevant_languages": [
+        "eng_Latn",
+        "arb_Arab",
+        "arz_Arab",
+        "swa_Latn"
+      ],
+      "left_to_right": true
     },
     {
       "name": "Saudi Arabic",
