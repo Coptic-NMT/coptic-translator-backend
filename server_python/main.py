@@ -81,7 +81,7 @@ def translate_universal(text: str, src: str, tgt: str, model_name: str) -> tuple
         if src == pivot_lang:
             return get_coptic_translation(text, src, tgt)
         
-        pivot_translation, status = translate_universal(text, src, pivot_lang)
+        pivot_translation, status = translate_universal(text, src, pivot_lang, model_name)
         if status != HTTPStatus.OK:
             return pivot_translation, status
         
