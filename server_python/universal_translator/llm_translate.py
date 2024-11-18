@@ -137,7 +137,7 @@ def translate_claude(src: dict, tgt: dict, text: str, model: Model):
 def translate_openai(src: dict, tgt: dict, text: str, model: Model):
     USER_PROMPT = """Translate the following from {src_name} to {tgt_name}. If the input is not correctly in the {src_name} language, do your best attempt at translating to {tgt_name}, or, if it already translated, just copy the output.
 
-    {src_name}: {text}"""
+    {src_name} input: {text}"""
 
     # Prepare the prompt for the translation
     user_prompt = USER_PROMPT.format(src_name=src['name'], tgt_name=tgt['name'], text=text)

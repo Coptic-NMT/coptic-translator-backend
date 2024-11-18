@@ -59,8 +59,8 @@ limiter = Limiter(
 
 def gtranslate(text, src, tgt):
     # HACK: for compliance let's use gpt-4o-mini-2024-07-18
-    response = universal_translator.llm_translate.translate_universal(src, tgt, text, model_name="gpt-4o-mini-2024-07-18")
-    return response.translation.text
+    return universal_translator.llm_translate.translate_universal(src, tgt, text, model_name="gpt-4o-mini-2024-07-18")
+
 
 
 def translate_universal(text: str, src: str, tgt: str, model_name: str) -> tuple[str, HTTPStatus]:
@@ -89,8 +89,11 @@ def translate_universal(text: str, src: str, tgt: str, model_name: str) -> tuple
 
     # Use googletrans, when possible
     if src in googletrans_languages and tgt in googletrans_languages:
-        translation = gtranslate(text, src, tgt)
-        return translation, HTTPStatus.OK
+        translation_response = gtranslate(text, src, tgt)
+        print(f"Input cost: {translation_response.input_cost:.6f}")
+        print(f"Output cost: {translation_response.output_cost:.6f}")
+        print(f"Total cost: {translation_response.input_cost + translation_response.output_cost:.6f}")
+        return translation_response.translation.text, HTTPStatus.OK
     
     # Otherwise, just use our universal translator
     translation_response = universal_translator.llm_translate.translate_universal(src, tgt, text, model_name)
