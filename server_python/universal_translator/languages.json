@@ -729,7 +729,7 @@
     },
     {
       "name": "Hebrew",
-      "google_code": "he",
+      "google_code": "iw",
       "flores_code": "heb_Hebr",
       "estimated_speakers": 9000000,
       "relevant_languages": [
@@ -1247,7 +1247,7 @@
     },
     {
       "name": "Northern Kurdish",
-      "google_code": "kmr",
+      "google_code": "ku",
       "flores_code": "kmr_Latn",
       "estimated_speakers": 15000000,
       "relevant_languages": [
@@ -2838,16 +2838,6 @@
         "left_to_right": true
       },
       {
-        "name": "Brainrot",
-        "google_code": "br",
-        "flores_code": "brn_Latn",
-        "estimated_speakers": 0,
-        "relevant_languages": [
-          "eng_Latn"
-        ],
-        "left_to_right": true
-      },
-      {
         "name": "Cornish",
         "google_code": "kw",
         "flores_code": "cor_Latn",
@@ -2856,6 +2846,18 @@
           "eng_Latn",
           "bre_Latn",
           "fra_Latn"
+        ],
+        "left_to_right": true
+      },
+      {
+        "name": "Corsican",
+        "google_code": "co",
+        "flores_code": "cos_Latn",
+        "estimated_speakers": 300000,
+        "relevant_languages": [
+          "fra_Latn",
+          "ita_Latn",
+          "eng_Latn"
         ],
         "left_to_right": true
       },
@@ -2899,6 +2901,216 @@
         ],
         "left_to_right": true
       },
+    {
+      "name": "Albanian",
+      "google_code": "sq",
+      "flores_code": "sqi_Latn",
+      "estimated_speakers": 7600000,
+      "relevant_languages": [
+        "eng_Latn",
+        "ell_Grek",
+        "ita_Latn",
+        "mkd_Cyrl",
+        "srp_Cyrl"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Basque",
+      "google_code": "eu",
+      "flores_code": "eus_Latn",
+      "estimated_speakers": 750000,
+      "relevant_languages": [
+        "spa_Latn",
+        "fra_Latn",
+        "eng_Latn"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Bosnian",
+      "google_code": "bs",
+      "flores_code": "bos_Latn",
+      "estimated_speakers": 2500000,
+      "relevant_languages": [
+        "eng_Latn",
+        "hrv_Latn",
+        "srp_Cyrl",
+        "deu_Latn"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Bulgarian",
+      "google_code": "bg",
+      "flores_code": "bul_Cyrl",
+      "estimated_speakers": 8000000,
+      "relevant_languages": [
+        "eng_Latn",
+        "rus_Cyrl",
+        "mkd_Cyrl",
+        "srp_Cyrl",
+        "tur_Latn"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Croatian",
+      "google_code": "hr",
+      "flores_code": "hrv_Latn",
+      "estimated_speakers": 5600000,
+      "relevant_languages": [
+        "eng_Latn",
+        "deu_Latn",
+        "ita_Latn",
+        "bos_Latn",
+        "srp_Cyrl"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Hawaiian",
+      "google_code": "haw",
+      "flores_code": "haw_Latn",
+      "estimated_speakers": 24000,
+      "relevant_languages": [
+        "eng_Latn",
+        "spa_Latn",
+        "fra_Latn"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Hmong",
+      "google_code": "hmn",
+      "flores_code": "hmn_Latn",
+      "estimated_speakers": 4000000,
+      "relevant_languages": [
+        "eng_Latn",
+        "zho_Hans",
+        "vie_Latn",
+        "tha_Thai"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Irish",
+      "google_code": "ga",
+      "flores_code": "gle_Latn",
+      "estimated_speakers": 170000,
+      "relevant_languages": [
+        "eng_Latn",
+        "gla_Latn",
+        "cym_Latn",
+        "bre_Latn"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Luxembourgish",
+      "google_code": "lb",
+      "flores_code": "ltz_Latn",
+      "estimated_speakers": 400000,
+      "relevant_languages": [
+        "deu_Latn",
+        "fra_Latn",
+        "eng_Latn",
+        "nld_Latn"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Macedonian",
+      "google_code": "mk",
+      "flores_code": "mkd_Cyrl",
+      "estimated_speakers": 2000000,
+      "relevant_languages": [
+        "eng_Latn",
+        "bul_Cyrl",
+        "srp_Cyrl",
+        "rus_Cyrl",
+        "ell_Grek"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Maltese",
+      "google_code": "mt",
+      "flores_code": "mlt_Latn",
+      "estimated_speakers": 520000,
+      "relevant_languages": [
+        "eng_Latn",
+        "ita_Latn",
+        "arb_Arab",
+        "fra_Latn"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Maori",
+      "google_code": "mi",
+      "flores_code": "mri_Latn",
+      "estimated_speakers": 185000,
+      "relevant_languages": [
+        "eng_Latn",
+        "haw_Latn",
+        "smo_Latn"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Mongolian",
+      "google_code": "mn",
+      "flores_code": "khk_Cyrl",
+      "estimated_speakers": 5200000,
+      "relevant_languages": [
+        "eng_Latn",
+        "rus_Cyrl",
+        "zho_Hans",
+        "kaz_Cyrl"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Samoan",
+      "google_code": "sm",
+      "flores_code": "smo_Latn",
+      "estimated_speakers": 510000,
+      "relevant_languages": [
+        "eng_Latn",
+        "haw_Latn",
+        "mri_Latn"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Serbian",
+      "google_code": "sr",
+      "flores_code": "srp_Cyrl",
+      "estimated_speakers": 12000000,
+      "relevant_languages": [
+        "eng_Latn",
+        "rus_Cyrl",
+        "hrv_Latn",
+        "bos_Latn",
+        "mkd_Cyrl"
+      ],
+      "left_to_right": true
+    },
+    {
+      "name": "Slovenian",
+      "google_code": "sl",
+      "flores_code": "slv_Latn",
+      "estimated_speakers": 2500000,
+      "relevant_languages": [
+        "eng_Latn",
+        "deu_Latn",
+        "hrv_Latn",
+        "ita_Latn",
+        "hun_Latn"
+      ],
+        "left_to_right": true
+      },
       {
         "name": "Tokipona",
         "google_code": "tok",
@@ -2910,5 +3122,73 @@
           "fra_Latn"
         ],
         "left_to_right": true
+      },
+      {
+        "name": "Brainrot",
+        "google_code": "brt",
+        "flores_code": "brn_Latn",
+        "estimated_speakers": 0,
+        "relevant_languages": [
+          "eng_Latn",
+          "bmr_Latn"
+        ],
+        "left_to_right": true,
+        "is_retarded": true
+      },
+      {
+        "name": "Boomer",
+        "google_code": "bmr",
+        "flores_code": "bmr_Latn",
+        "estimated_speakers": 0,
+        "relevant_languages": [
+          "eng_Latn",
+          "brn_Latn",
+          "fbr_Latn",
+          "tbr_Latn"
+        ],
+        "left_to_right": true,
+        "is_retarded": true
+      },
+      {
+        "name": "Tech Bro",
+        "google_code": "tbr",
+        "flores_code": "tbr_Latn",
+        "estimated_speakers": 0,
+        "relevant_languages": [
+          "eng_Latn",
+          "crp_Latn",
+          "brn_Latn",
+          "fbr_Latn"
+        ],
+        "left_to_right": true,
+        "is_retarded": true
+      },
+      {
+        "name": "Corporate",
+        "google_code": "crp",
+        "flores_code": "crp_Latn",
+        "estimated_speakers": 0,
+        "relevant_languages": [
+          "eng_Latn",
+          "tbr_Latn",
+          "brn_Latn",
+          "fbr_Latn"
+        ],
+        "left_to_right": true,
+        "is_retarded": true
+      },
+      {
+        "name": "Finance Bro",
+        "google_code": "fbr",
+        "flores_code": "fbr_Latn",
+        "estimated_speakers": 0,
+        "relevant_languages": [
+          "eng_Latn",
+          "tbr_Latn",
+          "crp_Latn",
+          "brn_Latn"
+        ],
+        "left_to_right": true,
+        "is_retarded": true
       }
     ]
