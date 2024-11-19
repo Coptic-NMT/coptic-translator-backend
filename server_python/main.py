@@ -173,7 +173,7 @@ def get_coptic_translation(text, src, tgt) -> tuple[str | None, HTTPStatus]:
 
 
 @app.route("/translate", methods=["POST"])
-@limiter.limit("50 per minute")
+@limiter.limit("200 per hour")
 def translate():
     req = request.get_json()
     src, tgt, text = req["src"], req["tgt"], req["text"]
