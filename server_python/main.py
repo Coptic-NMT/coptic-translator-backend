@@ -53,7 +53,7 @@ HEADERS = {"Content-Type": "application/json", "Authorization": "Bearer " + API_
 limiter = Limiter(
     app=app,
     key_func=get_remote_address,  # Uses IP address to track requests
-    default_limits=["200 per day", "50 per hour"]  # Default limits
+    default_limits=["600 per day", "200 per hour", "50 per minute"]
 )
 
 
@@ -173,7 +173,6 @@ def get_coptic_translation(text, src, tgt) -> tuple[str | None, HTTPStatus]:
 
 
 @app.route("/translate", methods=["POST"])
-@limiter.limit("200 per hour")
 def translate():
     req = request.get_json()
     src, tgt, text = req["src"], req["tgt"], req["text"]
