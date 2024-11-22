@@ -50,6 +50,9 @@ GENERATION_CONFIG = {
 
 HEADERS = {"Content-Type": "application/json", "Authorization": "Bearer " + API_TOKEN}
 
+def key_func():
+    return request.headers.get('X-Forwarded-For', request.remote_addr).split(',')[0]
+
 limiter = Limiter(
     app=app,
     key_func=get_remote_address,  # Uses IP address to track requests
