@@ -55,7 +55,7 @@ def key_func():
 
 limiter = Limiter(
     app=app,
-    key_func=get_remote_address,  # Uses IP address to track requests
+    key_func=key_func,  # Uses IP address to track requests
     default_limits=["600 per day", "200 per hour", "50 per minute"]
 )
 
