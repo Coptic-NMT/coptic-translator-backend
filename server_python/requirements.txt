@@ -1,7 +1,0 @@
-googletrans-py==4.0.0
-Flask==3.0.2
-python-dotenv==1.0.1
-requests==2.31.0
-anthropic==0.39.0
-openai==1.54.3
-Flask-Limiter==3.8.0

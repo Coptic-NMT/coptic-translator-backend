@@ -1,4 +1,3 @@
-import http
 import os
 import time
 from flask import Flask, request, jsonify
@@ -6,10 +5,8 @@ from googletrans import Translator, LANGUAGES as googletrans_languages
 from dotenv import load_dotenv
 import requests
 from http import HTTPStatus
-from util import degreekify, greekify
 import universal_translator.llm_translate
 from flask_limiter import Limiter
-from flask_limiter.util import get_remote_address
 
 load_dotenv()
 
@@ -28,27 +25,7 @@ BOHAIRIC_COPTIC = "cop_boh"
 
 COPTIC_LANGUAGES = [SAHIDIC_COPTIC, BOHAIRIC_COPTIC]
 
-COPTIC_DIALECT_TAG = {
-    SAHIDIC_COPTIC: "з",
-    BOHAIRIC_COPTIC: "б",
-}
-
-GENERATION_CONFIG = {
-    "max_length": 20,
-    "max_new_tokens": 128,
-    "min_new_tokens": 1,
-    "min_length": 0,
-    "early_stopping": True,
-    "do_sample": False,
-    "num_beams": 5,
-    "num_beam_groups": 1,
-    "top_k": 50,
-    "top_p": 0.95,
-    "temperature": 1.0,
-    "diversity_penalty": 0.0,
-}
-
-HEADERS = {"Content-Type": "application/json", "Authorization": "Bearer " + API_TOKEN}
+HEADERS = {"Content-Type": "application/json", "Authorization": f"Bearer {API_TOKEN}"}
 
 def key_func():
     return request.headers.get('X-Forwarded-For', request.remote_addr).split(',')[0]
@@ -107,47 +84,24 @@ def translate_universal(text: str, src: str, tgt: str, model_name: str) -> tuple
     return translation_response.translation.text, HTTPStatus.OK
 
 
-# Only when one of src or tgt is coptic
-def preprocess(src, text, tgt):
-    if src != ENGLISH and src not in COPTIC_LANGUAGES:
-        raise ValueError(f"Invalid preprocessing of {src} to {tgt}")
-
-    if src in COPTIC_LANGUAGES:
-        text = greekify(text.lower())
-        text = f"{COPTIC_DIALECT_TAG[src]} {text}"
-    else:
-        text = f"{COPTIC_DIALECT_TAG[tgt]} {text}"
-
-    return text
-
-
-def postprocess(tgt, text):
-    if tgt in COPTIC_LANGUAGES:
-        text = degreekify(text)
-    return text
-
-
 def get_coptic_translation(text, src, tgt) -> tuple[str | None, HTTPStatus]:
     if (src in COPTIC_LANGUAGES and tgt != ENGLISH) or (tgt in COPTIC_LANGUAGES and src != ENGLISH):
         raise ValueError(f"Cannot run coptic translation from {src} to {tgt}")
     if src not in COPTIC_LANGUAGES and tgt not in COPTIC_LANGUAGES:
         raise ValueError(f"Cannot run coptic translation from {src} to {tgt}")
 
-    text = preprocess(src, text, tgt)
-    
-    api = (
-        ENGLISH_TO_COPTIC_ENDPOINT
-        if tgt in COPTIC_LANGUAGES
-        else COPTIC_TO_ENGLISH_ENDPOINT
-    )
-    if src in COPTIC_LANGUAGES and tgt in COPTIC_LANGUAGES:
+    if tgt in COPTIC_LANGUAGES:
+        api = ENGLISH_TO_COPTIC_ENDPOINT
+        instance = {
+            "inputs": text,
+            "to_bohairic": tgt == BOHAIRIC_COPTIC,
+        }
+    else:
         api = COPTIC_TO_ENGLISH_ENDPOINT
-
-    instance = {
-        "inputs": [text],
-        "parameters": GENERATION_CONFIG,
-        "options": {"wait_for_model": True},
-    }
+        instance = {
+            "inputs": text,
+            "from_bohairic": src == BOHAIRIC_COPTIC,
+        }
 
     translation = None
     status = None
@@ -161,17 +115,16 @@ def get_coptic_translation(text, src, tgt) -> tuple[str | None, HTTPStatus]:
                     status = HTTPStatus.UNPROCESSABLE_ENTITY
                     break
             response.raise_for_status()
-            translation = result[0]["generated_text"]
+            translation = result[0]["translation"]
             status = HTTPStatus.OK
             break
         except Exception as e:
             time.sleep(5)
             error = e
             continue
-    
+
     if error and status is None:
         raise error
-    translation = postprocess(tgt, translation)
     return translation, status
 
 
