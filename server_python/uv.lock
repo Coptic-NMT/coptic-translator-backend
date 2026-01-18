@@ -164,6 +164,7 @@ dependencies = [
     { name = "flask" },
     { name = "flask-limiter" },
     { name = "googletrans-py" },
+    { name = "gunicorn" },
     { name = "openai" },
     { name = "python-dotenv" },
     { name = "requests" },
@@ -175,6 +176,7 @@ requires-dist = [
     { name = "flask", specifier = ">=3.0.2" },
     { name = "flask-limiter", specifier = ">=3.8.0" },
     { name = "googletrans-py", specifier = ">=4.0.0" },
+    { name = "gunicorn", specifier = ">=21.0.0" },
     { name = "openai", specifier = ">=2.6.1" },
     { name = "python-dotenv", specifier = ">=1.0.1" },
     { name = "requests", specifier = ">=2.31.0" },
@@ -251,6 +253,18 @@ dependencies = [
     { name = "httpx" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/50/e5/37d8bd1d6f186b642b29f3c7761eb162c54e2bbd3cfc0182dc2fb6c1327f/googletrans-py-4.0.0.tar.gz", hash = "sha256:487963819ced88f1f81d848786e2d3e02544833d161cc5edb178a1f74bde6d98", size = 12980, upload_time = "2022-04-13T14:48:07.745Z" }
+
+[[package]]
+name = "gunicorn"
+version = "23.0.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "packaging" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/34/72/9614c465dc206155d93eff0ca20d42e1e35afc533971379482de953521a4/gunicorn-23.0.0.tar.gz", hash = "sha256:f014447a0101dc57e294f6c18ca6b40227a4c90e9bdb586042628030cba004ec", size = 375031, upload_time = "2024-08-10T20:25:27.378Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/cb/7d/6dac2a6e1eba33ee43f318edbed4ff29151a49b5d37f080aad1e6469bca4/gunicorn-23.0.0-py3-none-any.whl", hash = "sha256:ec400d38950de4dfd418cff8328b2c8faed0edb0d517d3394e457c317908ca4d", size = 85029, upload_time = "2024-08-10T20:25:24.996Z" },
+]
 
 [[package]]
 name = "h11"
