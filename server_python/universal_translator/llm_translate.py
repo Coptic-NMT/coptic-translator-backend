@@ -1,4 +1,5 @@
 import json
+import logging
 from pathlib import Path
 import anthropic
 import openai
@@ -6,6 +7,8 @@ import os
 from dotenv import load_dotenv
 from enum import Enum
 from pydantic import BaseModel
+
+logger = logging.getLogger(__name__)
 
 class Providers(Enum):
     ANTHROPIC = "anthropic"
@@ -26,9 +29,25 @@ class TranslationResponse(BaseModel):
     translation: Translation
     input_cost: float
     output_cost: float
-    
+
+# OpenAI models first
+OPENAI_MODELS = [
+    Model(
+        type=Providers.OPENAI,
+        name='gpt-4o-2024-08-06',
+        input_cost_per_token=2.5 * 10**-6,
+        output_cost_per_token=10 * 10**-6
+    ),
+    Model(
+        type=Providers.OPENAI,
+        name='gpt-4o-mini-2024-07-18',
+        input_cost_per_token=0.15 * 10**-6,
+        output_cost_per_token=0.6 * 10**-6
+    ),
+]
+
 ANTHROPIC_MODELS = [
-        Model(
+    Model(
         type=Providers.ANTHROPIC,
         name='claude-3-5-sonnet-20241022',
         input_cost_per_token = 3 * 10**-6,
@@ -48,33 +67,18 @@ ANTHROPIC_MODELS = [
     ),
 ]
 
-OPENAI_MODELS = [
-    Model(
-        type=Providers.OPENAI,
-        name='gpt-4o-2024-08-06',
-        input_cost_per_token=2.5 * 10**-6,
-        output_cost_per_token=10 * 10**-6
-    ),
-    Model(
-        type=Providers.OPENAI,
-        name='gpt-4o-mini-2024-07-18',
-        input_cost_per_token=0.15 * 10**-6,
-        output_cost_per_token=0.6 * 10**-6
-    ),
-]
-
+# OpenAI models first in the list
 MODELS = [
+    *OPENAI_MODELS,
     *ANTHROPIC_MODELS,
-    *OPENAI_MODELS
 ]
-
 
 
 load_dotenv()
 
 languages = json.loads(Path('universal_translator/languages.json').read_text())
-client_anthropic = anthropic.Anthropic(api_key=os.environ['ANTHROPIC_API_KEY'])
-client_openai = openai.OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+client_anthropic = anthropic.AsyncAnthropic(api_key=os.environ['ANTHROPIC_API_KEY'])
+client_openai = openai.AsyncOpenAI(api_key=os.environ['OPENAI_API_KEY'])
 
 # TODO: make a choice between google_code or flores_code!
 def get_language(code: str):
@@ -90,7 +94,8 @@ def get_model(model_name: str):
         raise ValueError(f"Invalid model {model_name}. Valid models are: {', '.join([model.name for model in MODELS])}")
     return model
 
-def translate_claude(src: dict, tgt: dict, text: str, model: Model):
+
+async def translate_claude(src: dict, tgt: dict, text: str, model: Model) -> TranslationResponse:
     USER_PROMPT = """Translate the following from {src_name} to {tgt_name}.  Wrap your output in <translation></translation> tags. If the input is not correctly in the {src_name} language, do your best attempt at translating to {tgt_name}, or, if it already translated, just copy the output into the <translation> tags.
 
     {src_name}: {text}"""
@@ -99,9 +104,9 @@ def translate_claude(src: dict, tgt: dict, text: str, model: Model):
 
     # Prepare the prompt for the translation
     user_prompt = USER_PROMPT.format(src_name=src['name'], tgt_name=tgt['name'], text=text)
-    assistant_prompt = ASSISTANT_PROMPT.format(tgt_name=tgt['name']) 
+    assistant_prompt = ASSISTANT_PROMPT.format(tgt_name=tgt['name'])
     # Perform the translation using the anthropic client
-    response = client_anthropic.messages.create(
+    response = await client_anthropic.messages.create(
         model=model.name,
         max_tokens=400,
         temperature=0,
@@ -134,7 +139,7 @@ def translate_claude(src: dict, tgt: dict, text: str, model: Model):
     return TranslationResponse(translation=translation, input_cost=input_cost, output_cost=output_cost)
 
 
-def translate_openai(src: dict, tgt: dict, text: str, model: Model):
+async def translate_openai(src: dict, tgt: dict, text: str, model: Model) -> TranslationResponse:
     USER_PROMPT = """Translate the following from {src_name} to {tgt_name}. If the input is not correctly in the {src_name} language, do your best attempt at translating to {tgt_name}, or, if it already translated, just copy the output.
 
     {src_name} input: {text}"""
@@ -143,7 +148,7 @@ def translate_openai(src: dict, tgt: dict, text: str, model: Model):
     user_prompt = USER_PROMPT.format(src_name=src['name'], tgt_name=tgt['name'], text=text)
 
     # Perform the translation using the OpenAI client
-    response = client_openai.beta.chat.completions.parse(
+    response = await client_openai.beta.chat.completions.parse(
         model=model.name,
         temperature=0,
         messages=[
@@ -160,19 +165,20 @@ def translate_openai(src: dict, tgt: dict, text: str, model: Model):
     return TranslationResponse(translation=translation, input_cost=input_cost, output_cost=output_cost)
 
 
+# Default fallbacks: OpenAI first, then Anthropic
 default_fallbacks = [get_model('gpt-4o-mini-2024-07-18'), get_model('claude-3-haiku-20240307')]
 
-def translate_universal(src_code, tgt_code, text, model_name = "claude-3-5-sonnet-20241022", fallbacks=True):
+async def translate_universal(src_code, tgt_code, text, model_name = "gpt-4o-2024-08-06", fallbacks=True) -> TranslationResponse:
     src = get_language(src_code)
     tgt = get_language(tgt_code)
 
     model = get_model(model_name)
     try:
         match model.type:
-            case Providers.ANTHROPIC:
-                return translate_claude(src, tgt, text, model)
             case Providers.OPENAI:
-                return translate_openai(src, tgt, text, model)
+                return await translate_openai(src, tgt, text, model)
+            case Providers.ANTHROPIC:
+                return await translate_claude(src, tgt, text, model)
             case _:
                 raise ValueError(f"Invalid model type {model.type}")
     except Exception as e:
@@ -180,13 +186,8 @@ def translate_universal(src_code, tgt_code, text, model_name = "claude-3-5-sonne
         if fallbacks:
             # remove the provider from the list
             fallbacks = [fallback for fallback in fallbacks if fallback.type != model.type]
-            print(f"WARNING: {e}. Falling back to {fallbacks}")
+            logger.warning(f"{e}. Falling back to {[f.name for f in fallbacks]}")
             model_name = fallbacks[0].name
-            return translate_universal(src_code, tgt_code, text, model_name, fallbacks=fallbacks[1:])
+            return await translate_universal(src_code, tgt_code, text, model_name, fallbacks=fallbacks[1:])
 
         raise e
-
-
-    
-    
-
