@@ -168,7 +168,7 @@ async def translate_openai(src: dict, tgt: dict, text: str, model: Model) -> Tra
 # Default fallbacks: OpenAI first, then Anthropic
 default_fallbacks = [get_model('gpt-4o-mini-2024-07-18'), get_model('claude-3-haiku-20240307')]
 
-async def translate_universal(src_code, tgt_code, text, model_name = "gpt-4o-2024-08-06", fallbacks=True) -> TranslationResponse:
+async def translate_universal(src_code, tgt_code, text, model_name = "gpt-4o-mini-2024-07-18", fallbacks=True) -> TranslationResponse:
     src = get_language(src_code)
     tgt = get_language(tgt_code)
 
