@@ -55,7 +55,7 @@ async def gtranslate(text: str, src: str, tgt: str):
     return await universal_translator.llm_translate.translate_universal(src, tgt, text, model_name="gpt-4o-mini-2024-07-18")
 
 
-async def translate_universal(text: str, src: str, tgt: str, model_name: str) -> tuple[str, HTTPStatus]:
+async def translate_universal(text: str, src: str, tgt: str, model_name: str | None = None) -> tuple[str, HTTPStatus]:
     if src in COPTIC_LANGUAGES:
         pivot_lang = ENGLISH
         translation, status = await get_coptic_translation(text, src, pivot_lang)
@@ -85,7 +85,8 @@ async def translate_universal(text: str, src: str, tgt: str, model_name: str) ->
         return translation_response.translation.text, HTTPStatus.OK
 
     # Otherwise, just use our universal translator
-    translation_response = await universal_translator.llm_translate.translate_universal(src, tgt, text, model_name)
+    kwargs = {"model_name": model_name} if model_name else {}
+    translation_response = await universal_translator.llm_translate.translate_universal(src, tgt, text, **kwargs)
     return translation_response.translation.text, HTTPStatus.OK
 
 
@@ -139,7 +140,7 @@ class TranslateRequest(BaseModel):
     src: str
     tgt: str
     text: str
-    model: str = "gpt-4o-2024-08-06"
+    model: str | None = None
 
 
 @app.post("/translate")
